@@ -1,0 +1,41 @@
+:root {
+	--background: #2b2a33;
+	--card: #1c1b22aa;
+	--button: #1f1e25;
+	--button-hover: #232229;
+	--title: #dcdcdc;
+	--text: #bababa;
+}
+
+@font-face {
+	font-family: "Ubuntu Mono";
+	src: url("../assets/fonts/UbuntuMono-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Ubuntu Mono";
+	src: url("../assets/fonts/UbuntuMono-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+body {
+	font-family: "Ubuntu Mono";
+	font-weight: bold;
+	display: flex;
+	font-size: 15px;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	height: auto;
+	background-color: var(--background);
+	margin: 0;
+	color: var(--text);
+	padding: 10px;
+	overflow: hidden;
+	flex-direction: column;
+	gap: 15px;
+	transition: background-color 0.3s ease;
+}
