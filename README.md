@@ -16,7 +16,7 @@ Tools' status is saved in a persistent way.
 - **Todo list**: manage tasks
 - **Bookmarks**: 15 ordered bookmark slots:
   - `Alt+click` on a bookmark: add/edit a bookmark:
-    - _name_: choose one of the slug names from [`slugs.mg`](https://github.com/antoniopelusi/ToolsTab/blob/main/utils/slugs.md) to automatically use the corresponding icon
+    - _name_: choose one of the slug names from [`slugs.mg`](utils/slugs.md) to automatically use the corresponding icon
     - _link_: the URL of the bookmark
     - When editing a bookmark, press `Enter` or click somewhere else to save it
     - When editing a bookmark, press `Escape` to abort the operation
@@ -31,3 +31,13 @@ Tools' status is saved in a persistent way.
 - **Notepad**: Take notes
 - **Dynamic background**: The background color changes automatically according to the day/night cycle
   - Enable/disable this feature from the extension popup menu
+
+## Screenshots
+
+![](assets/screenshots/06AM.png)
+![](assets/screenshots/09AM.png)
+![](assets/screenshots/12AM.png)
+![](assets/screenshots/02PM.png)
+![](assets/screenshots/05PM.png)
+![](assets/screenshots/07PM.png)
+![](assets/screenshots/12PM.png)
