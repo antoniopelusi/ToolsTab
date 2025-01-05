@@ -345,19 +345,17 @@ const initializeLinks = () => {
 		link.click();
 	};
 
-	const fetchSvgOrDefault = (name) => {
-		return fetch(`assets/icons/icons/${name}.svg`)
-			.then((response) => {
-				if (!response.ok) {
-					throw new Error("SVG not found");
-				}
-				return response.text();
-			})
-			.catch(() => {
-				return fetch("assets/icons/icons/default.svg").then((response) =>
-					response.text(),
-				);
-			});
+	const fetchSvgOrDefault = async (name) => {
+		try {
+			const response = await fetch(`assets/icons/icons/${name}.svg`);
+			if (!response.ok) {
+				throw new Error("SVG not found");
+			}
+			return await response.text();
+		} catch {
+			const defaultResponse = await fetch("assets/icons/icons/default.svg");
+			return await defaultResponse.text();
+		}
 	};
 
 	const handleButtonClick = (event, button) => {
@@ -598,9 +596,11 @@ const initializeClipboard = () => {
 
 	const updateTextareaBorder = (textarea) => {
 		if (textarea.value === "") {
-			textarea.style.borderLeft = "none";
+			textarea.style.borderBottom = "none";
+			textarea.style.backgroundColor = "transparent";
 		} else {
-			textarea.style.borderLeft = "rgba(0, 0, 0, 0.2) 6px solid";
+			textarea.style.borderBottom = "rgba(0, 0, 0, 0.1) 5px solid";
+			textarea.style.backgroundColor = "rgba(0, 0, 0, 0.07)";
 		}
 	};
 
@@ -616,7 +616,8 @@ const initializeClipboard = () => {
 				navigator.clipboard.writeText(textarea.value);
 			} else if (event.ctrlKey) {
 				textarea.value = "";
-				textarea.style.borderLeft = "none";
+				textarea.style.borderBottom = "none";
+				textarea.style.backgroundColor = "transparent";
 				saveClipboardData();
 			}
 		});

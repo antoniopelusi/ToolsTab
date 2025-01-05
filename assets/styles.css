@@ -68,6 +68,7 @@ body {
 }
 
 .flex-item {
+	min-height: 0;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -90,6 +91,7 @@ body {
 	background-color: var(--card);
 	transition: all ease 0.2s;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+	min-height: 100px;
 }
 
 .card:hover {
@@ -126,19 +128,6 @@ body {
 	padding: 1vw;
 }
 
-textarea {
-	font-family: "Ubuntu Mono";
-	color: var(--text);
-	background-color: transparent;
-	font-size: 16px;
-	width: 100%;
-	height: 100%;
-	resize: none;
-	border: none;
-	outline: none;
-	line-height: 1.5;
-}
-
 .links-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -146,7 +135,6 @@ textarea {
 	gap: 10px;
 	width: 100%;
 	height: 100%;
-	padding: 10px;
 	justify-content: center;
 	overflow-y: scroll;
 }
@@ -159,13 +147,13 @@ textarea {
 	font-size: 14px;
 	color: var(--text);
 	background-color: transparent;
-	padding: 1px;
-	gap: 8px;
+	padding: 5px;
+	gap: 1vh;
 	border: none;
 	border-radius: 10px;
 	cursor: pointer;
 	transition: all 0.2s ease;
-	min-height: 50px;
+	min-height: 55px;
 	min-width: 85px;
 }
 
@@ -176,6 +164,10 @@ textarea {
 .link-button svg.icon {
 	width: 24px;
 	height: 24px;
+}
+
+.button-text {
+	overflow: visible;
 }
 
 .button-edit-input {
@@ -208,7 +200,6 @@ textarea {
 	width: 100%;
 	min-width: 230px;
 	height: 100%;
-	min-height: 200px;
 	max-height: 24dvh;
 	color: var(--text);
 	list-style-type: none;
@@ -287,8 +278,21 @@ button img:hover {
 	width: 90%;
 	height: 100%;
 	min-width: 230px;
+	line-height: 1.5;
+}
+
+textarea {
+	font-family: "Ubuntu Mono";
 	color: var(--text);
+	background-color: transparent;
+	font-size: 16px;
+	width: 100%;
+	height: 100%;
+	min-height: 0;
 	overflow-y: scroll;
+	resize: none;
+	border: none;
+	outline: none;
 }
 
 #new-todo {
@@ -326,10 +330,11 @@ button img:hover {
 	justify-content: start;
 	width: 100%;
 	height: 100%;
+	min-width: 500px;
 }
 
 .calendar-left {
-	width: 50%;
+	width: 40%;
 	font-size: 16px;
 	color: var(--text);
 	text-align: left;
@@ -351,10 +356,18 @@ button img:hover {
 
 .calendar-right {
 	display: flex;
-	align-items: center;
 	justify-content: right;
-	width: 50%;
+	align-items: start;
+	width: 60%;
 	height: 100%;
+	overflow-y: scroll;
+}
+
+#calendar-centered {
+    margin: auto;
+    max-height: 100%;
+    margin-right: 0;
+    overflow-y: auto;
 }
 
 .calendar {
@@ -362,9 +375,10 @@ button img:hover {
 	align-items: center;
 	justify-content: space-between;
 	flex-direction: column;
-	width: 400px;
+	width: 25vw;
 	height: 270px;
 	border-radius: 10px;
+	min-width: 270px;
 }
 
 header {
@@ -372,10 +386,10 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	flex-direction: row;
-	width: 95%;
+	width: 97%;
 	height: 30px;
 	min-height: 30px;
-	margin-bottom: 10px;
+	margin-bottom: 3px;
 }
 
 header .calendar-navigation {
@@ -408,6 +422,7 @@ header .calendar-navigation span:hover {
 header .calendar-current-date {
 	color: var(--text-dim);
 	opacity: 0.8;
+	margin-left: 6px;
 }
 
 .calendar-body {
@@ -437,11 +452,12 @@ header .calendar-current-date {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 5px;
+	/* margin-top: 0.5vh; */
 	position: relative;
 	z-index: 1;
 	cursor: default;
-	height: 30px;
+	height: 3.7vh;
+	min-height: 30px;
 }
 
 .calendar-dates li.inactive {
@@ -476,29 +492,26 @@ header .calendar-current-date {
 	width: 100%;
 	height: 100%;
 	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
 	flex-direction: column;
-	gap: 20px;
+	gap: 3%;
+	overflow-y: scroll;
 }
 
 #clipboard-container div {
 	width: 100%;
 	height: 100%;
+	min-height: 55px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-family: "Ubuntu Mono";
 	color: var(--text);
 	transition: background-color 0.3s ease;
-	padding: 5px;
-	padding-left: 0px;
 	border-radius: 10px;
-	
 }
 
 #clipboard-container div:hover {
-	background-color: rgba(0, 0, 0, 0.07);
+	background: rgba(0, 0, 0, 0.07);
 }
 
 #clipboard-container div textarea {
@@ -509,6 +522,8 @@ header .calendar-current-date {
 	justify-content: center;
 	text-align: left;
 	overflow-y: scroll;
-	padding: 10px;
 	word-break: break-all;
+	padding: 10px;
+	border-radius: 10px;
+
 }
