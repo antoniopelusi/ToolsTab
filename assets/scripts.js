@@ -115,13 +115,20 @@ const initializeDateTimeAndCalendar = () => {
 		hours = hours % 12;
 		hours = hours ? hours : 12;
 
-		document.getElementById("current-date").innerHTML = `
-      <p>${date} ${month} ${year}</p>
-      <p>${dayOfWeek}</p>
-    `;
+		const currentDateElement = document.getElementById("current-date");
 
-		document.getElementById("current-time").innerHTML =
-			`${hours.toString().padStart(2, "0")}:${minutes} ${ampm}`;
+		currentDateElement.textContent = "";
+
+		const dateParagraph = document.createElement("p");
+		dateParagraph.textContent = `${date} ${month} ${year}`;
+		const dayOfWeekParagraph = document.createElement("p");
+		dayOfWeekParagraph.textContent = dayOfWeek;
+
+		currentDateElement.appendChild(dateParagraph);
+		currentDateElement.appendChild(dayOfWeekParagraph);
+
+		const currentTimeElement = document.getElementById("current-time");
+		currentTimeElement.textContent = `${hours.toString().padStart(2, "0")}:${minutes} ${ampm}`;
 	};
 
 	let date = new Date();
