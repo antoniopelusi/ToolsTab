@@ -24,8 +24,9 @@
 body {
 	font-family: "Ubuntu Mono";
 	font-weight: bold;
-	display: flex;
 	font-size: 15px;
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	width: auto;
@@ -35,7 +36,61 @@ body {
 	color: var(--text);
 	padding: 10px;
 	overflow: hidden;
-	flex-direction: column;
-	gap: 15px;
 	transition: background-color 0.3s ease;
+}
+
+#dynamicBackgroundCheckbox {
+	margin-top: 4px !important;
+	appearance: none;
+	background-color: #dfe1e4;
+	border-radius: 72px;
+	border-style: none;
+	flex-shrink: 0;
+	height: 20px;
+	margin: 0;
+	position: relative;
+	width: 30px;
+}
+
+#dynamicBackgroundCheckbox::before {
+	bottom: -6px;
+	content: "";
+	left: -6px;
+	position: absolute;
+	right: -6px;
+	top: -6px;
+}
+
+#dynamicBackgroundCheckbox,
+#dynamicBackgroundCheckbox::after {
+	transition: all 100ms ease-out;
+}
+
+#dynamicBackgroundCheckbox::after {
+	background-color: #fff;
+	border-radius: 50%;
+	content: "";
+	height: 14px;
+	left: 3px;
+	position: absolute;
+	top: 3px;
+	width: 14px;
+}
+
+#dynamicBackgroundCheckbox:hover {
+	background-color: #c9cbcd;
+	transition-duration: 0s;
+}
+
+#dynamicBackgroundCheckbox:checked {
+	background-color: #7790e1;
+}
+
+#dynamicBackgroundCheckbox:checked:hover {
+	background-color: #5a78db;
+}
+
+#dynamicBackgroundCheckbox:checked::after {
+	background-color: #fff;
+	left: 13px;
 }

@@ -497,11 +497,21 @@ const initializeLinks = () => {
 		input1.focus();
 
 		const saveInput = (status) => {
-			let newText1 = "";
-			let newText2 = "";
-			if (status === 0) {
-				newText1 = input1.value.trim().toLowerCase();
-				newText2 = input2.value.trim();
+			const newText1 = status === 0 ? input1.value.trim().toLowerCase() : "";
+			const newText2 = status === 0 ? input2.value.trim() : "";
+
+			if (newText1 === currentText1 && newText2 === currentText2) {
+				container.replaceWith(button);
+				return;
+			}
+
+			if (
+				currentText1 === "" &&
+				currentText2 === "" &&
+				(input1.value.trim().toLowerCase() === "" || input2.value.trim() === "")
+			) {
+				container.replaceWith(button);
+				return;
 			}
 
 			if (newText1 === "" || newText2 === "") {
