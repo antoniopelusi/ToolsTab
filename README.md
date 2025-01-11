@@ -6,9 +6,10 @@ Real-time sync across all tabs using browser local storage.
 
 Tools' status is saved in a persistent way.
 
-## Supported browsers
+## Download extension
 
-- Firefox
+- [Firefox](https://addons.mozilla.org/firefox/addon/toolstab/)
+- [Chrome]()
 
 ## Tools and usage
 
