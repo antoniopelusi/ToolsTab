@@ -101,10 +101,12 @@ body {
 
 .card.left {
 	width: 60%;
+	margin-right: 1vw;
 }
 
 .card.right {
 	width: 40%;
+	margin-left: 1vw;
 }
 
 #title {
@@ -122,10 +124,6 @@ body {
 	background: none;
 	border: none;
 	cursor: text;
-}
-
-#separator {
-	padding: 1vw;
 }
 
 .links-grid {
@@ -364,10 +362,10 @@ textarea {
 }
 
 #calendar-centered {
-    margin: auto;
-    max-height: 100%;
-    margin-right: 0;
-    overflow-y: auto;
+	margin: auto;
+	max-height: 100%;
+	margin-right: 0;
+	overflow-y: auto;
 }
 
 .calendar {
@@ -525,5 +523,18 @@ header .calendar-current-date {
 	word-break: break-all;
 	padding: 10px;
 	border-radius: 10px;
+}
 
+::-webkit-scrollbar {
+	width: 4px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(155, 155, 155, 0.5);
+	border-radius: 20px;
+	border: transparent;
 }
