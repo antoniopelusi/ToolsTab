@@ -11,6 +11,8 @@ Tools' status is saved in a persistent way.
 - [Firefox](https://addons.mozilla.org/firefox/addon/toolstab/)
 - [Chrome]()
 
+Package for manual installation available at the [release] page(https://github.com/antoniopelusi/ToolsTab/releases/).
+
 ## Tools and usage
 
 - **Calendar**: visualize day, time and calendar
