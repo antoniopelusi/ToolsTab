@@ -1,27 +1,3 @@
-{
-	"manifest_version": 3,
-	"name": "ToolsTab",
-	"version": "1.1",
-	"description": "Minimal and responsive browser startpage with useful tools.",
-	"chrome_url_overrides": {
-		"newtab": "index.html"
-	},
-	"chrome_settings_overrides": {
-		"homepage_url": "index.html"
-	},
-	"permissions": ["browserSettings"],
-	"action": {
-		"default_popup": "extension-popup/popup.html",
-		"default_icon": {
-			"128": "assets/icons/icon.png"
-		}
-	},
-	"icons": {
-		"128": "assets/icons/icon.png"
-	},
-	"browser_specific_settings": {
-		"gecko": {
-			"id": "antoniopelusi2000@gmail.com"
-		}
-	}
-}
+Paste here the content of the correct .json file:
+- Chrome: chrome_manifest.json
+- Firefox: firefox_manifest.json

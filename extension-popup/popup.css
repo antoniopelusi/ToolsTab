@@ -37,6 +37,8 @@ body {
 	padding: 10px;
 	overflow: hidden;
 	transition: background-color 0.3s ease;
+	width: 200px;
+	height: 50px;
 }
 
 #dynamicBackgroundCheckbox {
