@@ -9,7 +9,7 @@ Tools' status is saved in a persistent way.
 ## Download extension
 
 - [Firefox](https://addons.mozilla.org/firefox/addon/toolstab/)
-- [Chrome]()
+- [Chrome](https://chromewebstore.google.com/detail/toolstab/fejllmaclllnagjgachemaigpheidpep)
 
 Package for manual installation available at the [release page](https://github.com/antoniopelusi/ToolsTab/releases/).
 
