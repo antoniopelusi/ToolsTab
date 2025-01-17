@@ -41,20 +41,26 @@ function getBackgroundColors() {
 	const minutes = now.getMinutes();
 
 	const colors = {
-		night: "#001f3d",
-		dawn: "#ff6f47",
-		morning: "#87ceeb",
-		noon: "#00bfff",
-		sunset: "#f27a3a",
-		evening: "#3d4f5c",
+		earlyMorning: "#41405d", // 03:00 - 06:00
+		dawn: "#f3ae5d", // 06:00 - 09:00
+		morning: "#74c3e1", // 09:00 - 12:00
+		noon: "#57b0d9", // 12:00 - 15:00
+		afternoon: "#6d9cc3", // 15:00 - 18:00
+		evening: "#e48959", // 18:00 - 21:00
+		night: "#314867", // 21:00 - 00:00
+		midnight: "#1c304b", // 00:00 - 03:00
 	};
 
 	let startColor, endColor, factor;
 
-	if (hours >= 0 && hours < 6) {
-		startColor = colors.night;
+	if (hours >= 0 && hours < 3) {
+		startColor = colors.midnight;
+		endColor = colors.earlyMorning;
+		factor = (hours + minutes / 60) / 3;
+	} else if (hours >= 3 && hours < 6) {
+		startColor = colors.earlyMorning;
 		endColor = colors.dawn;
-		factor = (hours + minutes / 60) / 6;
+		factor = (hours + minutes / 60 - 3) / 3;
 	} else if (hours >= 6 && hours < 9) {
 		startColor = colors.dawn;
 		endColor = colors.morning;
@@ -65,16 +71,20 @@ function getBackgroundColors() {
 		factor = (hours + minutes / 60 - 9) / 3;
 	} else if (hours >= 12 && hours < 15) {
 		startColor = colors.noon;
-		endColor = colors.sunset;
+		endColor = colors.afternoon;
 		factor = (hours + minutes / 60 - 12) / 3;
 	} else if (hours >= 15 && hours < 18) {
-		startColor = colors.sunset;
+		startColor = colors.afternoon;
 		endColor = colors.evening;
 		factor = (hours + minutes / 60 - 15) / 3;
-	} else {
+	} else if (hours >= 18 && hours < 21) {
 		startColor = colors.evening;
 		endColor = colors.night;
-		factor = (hours + minutes / 60 - 18) / 6;
+		factor = (hours + minutes / 60 - 18) / 3;
+	} else {
+		startColor = colors.night;
+		endColor = colors.midnight;
+		factor = (hours + minutes / 60 - 21) / 3;
 	}
 
 	return { startColor, endColor, factor };
