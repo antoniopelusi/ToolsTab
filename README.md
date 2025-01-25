@@ -16,7 +16,12 @@ Package for manual installation available at the [release page](https://github.c
 ## Tools and usage
 
 - **Calendar**: visualize day, time and calendar
-- **Todo list**: manage tasks
+- **Todo list**: manage tasks:
+	- `Alt+click` on a todo list item: add/edit a bookmark:
+    - When editing a todo list item, press `Enter` or click somewhere else to save it
+    - When editing a todo list item, press `Escape` to abort the operation
+    - When editing a todo list item, press `Delete` to delete it
+  - `Ctrl+click` on a todo list item: delete it
 - **Bookmarks**: 15 ordered bookmark slots:
   - `Alt+click` on a bookmark: add/edit a bookmark:
     - _name_: choose one of the slug names from [`slugs.mg`](utils/slugs.md) to automatically use the corresponding icon
