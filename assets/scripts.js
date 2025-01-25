@@ -126,6 +126,7 @@ const initializeDateTimeAndCalendar = () => {
 		hours = hours ? hours : 12;
 
 		const currentDateElement = document.getElementById("current-date");
+		currentDateElement.style.overflowY = "scroll";
 
 		currentDateElement.textContent = "";
 
@@ -138,6 +139,7 @@ const initializeDateTimeAndCalendar = () => {
 		currentDateElement.appendChild(dayOfWeekParagraph);
 
 		const currentTimeElement = document.getElementById("current-time");
+		currentTimeElement.style.overflowY = "scroll";
 		currentTimeElement.textContent = `${hours.toString().padStart(2, "0")}:${minutes} ${ampm}`;
 	};
 
@@ -265,6 +267,61 @@ const initializeTodoList = () => {
 		const span = document.createElement("span");
 		span.textContent = text;
 
+		span.addEventListener("click", (event) => {
+			if (span.querySelector("input")) return;
+
+			if (event.altKey) {
+				const originalText = span.textContent;
+				const input = document.createElement("input");
+				input.type = "text";
+				input.value = span.textContent;
+				span.textContent = "";
+				input.style.backgroundColor = "transparent";
+				input.style.color = "white";
+				input.style.fontFamily = "Ubuntu Mono";
+				input.style.fontSize = "16px";
+				input.style.width = "100%";
+				input.style.border = "none";
+				input.style.outline = "none";
+				span.appendChild(input);
+				input.focus();
+
+				input.addEventListener("keydown", (e) => {
+					if (e.key === "Enter") {
+						if (input.value.trim() === "") {
+							li.remove();
+							saveChecklist();
+							updateClearButtonVisibility();
+						} else {
+							span.textContent = input.value.trim();
+							saveChecklist();
+						}
+					} else if (e.key === "Escape") {
+						span.textContent = originalText;
+					} else if (e.key === "Delete") {
+						li.remove();
+						saveChecklist();
+						updateClearButtonVisibility();
+					}
+				});
+
+				input.addEventListener("blur", () => {
+					if (input.value.trim() === "") {
+						li.remove();
+						saveChecklist();
+						updateClearButtonVisibility();
+					} else {
+						span.textContent = input.value.trim();
+						saveChecklist();
+					}
+				});
+			} else if (event.ctrlKey) {
+				li.remove();
+				saveChecklist();
+				updateClearButtonVisibility();
+			}
+		});
+
 		li.appendChild(checkbox);
 		li.appendChild(span);
 		todolist.appendChild(li);
@@ -316,7 +373,7 @@ const initializeTodoList = () => {
 /*     BOOKMARKS      */
 /**********************/
 const LINKS_STORAGE_KEY = "links-content";
-const MAX_LINKS = 15;
+const MAX_LINKS = 30;
 
 const linksContainer = document.getElementById("links-container");
 
@@ -476,7 +533,16 @@ const initializeLinks = () => {
 
 		savedLinks.sort((a, b) => a.text1.localeCompare(b.text1));
 
-		for (let i = 0; i < MAX_LINKS; i++) {
+		const columns = 3;
+		const totalLinks = savedLinks.length;
+		const totalRows = Math.ceil(totalLinks / columns);
+
+		const isLastRowComplete = totalLinks % columns === 0;
+
+		const rowsToShow = isLastRowComplete ? totalRows + 1 : totalRows;
+
+		linksContainer.innerHTML = "";
+		for (let i = 0; i < rowsToShow * columns; i++) {
 			addButtonToGrid(savedLinks[i] || { text1: "", text2: "" }, i);
 		}
 	};

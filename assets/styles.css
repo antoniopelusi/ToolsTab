@@ -1,5 +1,5 @@
 :root {
-	--background: #2b2a33;
+	--background: #3c3b47;
 	--card: #1c1b22a0;
 	--card-hover: #1c1b22a5;
 	--button: #1f1e25;
@@ -92,6 +92,7 @@ body {
 	transition: all ease 0.2s;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 	min-height: 100px;
+	min-width: 20px;
 }
 
 .card:hover {
@@ -151,7 +152,7 @@ body {
 	border-radius: 10px;
 	cursor: pointer;
 	transition: all 0.2s ease;
-	min-height: 55px;
+	min-height: 85px;
 	min-width: 85px;
 }
 
@@ -162,6 +163,8 @@ body {
 .link-button svg.icon {
 	width: 24px;
 	height: 24px;
+	min-width: 24px;
+	min-height: 24px;
 }
 
 .button-text {
@@ -196,7 +199,7 @@ body {
 .checklist {
 	font-family: "Ubuntu Mono";
 	width: 100%;
-	min-width: 230px;
+	min-width: 20px;
 	height: 100%;
 	max-height: 24dvh;
 	color: var(--text);
@@ -218,7 +221,7 @@ body {
 	justify-content: left;
 	width: 100%;
 	max-width: 30vw;
-	min-width: 200px;
+	min-width: 20px;
 	overflow-x: scroll;
 	min-height: 40px;
 	white-space: nowrap;
@@ -275,7 +278,7 @@ button img:hover {
 #notepad {
 	width: 90%;
 	height: 100%;
-	min-width: 230px;
+	min-width: 20px;
 	line-height: 1.5;
 }
 
@@ -328,7 +331,7 @@ textarea {
 	justify-content: start;
 	width: 100%;
 	height: 100%;
-	min-width: 500px;
+	min-width: 0px;
 }
 
 .calendar-left {
@@ -359,6 +362,7 @@ textarea {
 	width: 60%;
 	height: 100%;
 	overflow-y: scroll;
+	min-width: 270px;
 }
 
 #calendar-centered {
@@ -366,6 +370,7 @@ textarea {
 	max-height: 100%;
 	margin-right: 0;
 	overflow-y: auto;
+	min-width: 270px;
 }
 
 .calendar {
