@@ -1,5 +1,5 @@
 :root {
-	--background: #3c3b47;
+	--background: #313039;
 	--card: #1c1b22a0;
 	--card-hover: #1c1b22a5;
 	--button: #1f1e25;
@@ -42,6 +42,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	overflow: hidden;
+	scrollbar-width: none;
 }
 
 body {
@@ -115,16 +116,6 @@ body {
 	font-size: 18px;
 	font-weight: bold;
 	padding-bottom: 20px;
-}
-
-#title-button {
-	color: var(--text);
-	font-size: 18px;
-	font-weight: bold;
-	padding-bottom: 20px;
-	background: none;
-	border: none;
-	cursor: text;
 }
 
 .links-grid {
@@ -226,7 +217,6 @@ body {
 	overflow-x: scroll;
 	white-space: nowrap;
 	box-sizing: border-box;
-	scrollbar-width: none;
 }
 
 .checklist-item input[type="checkbox"] {
@@ -533,18 +523,4 @@ header .calendar-current-date {
 	word-break: break-all;
 	padding: 10px;
 	border-radius: 10px;
-}
-
-::-webkit-scrollbar {
-	width: 4px;
-}
-
-::-webkit-scrollbar-track {
-	background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-	background-color: rgba(155, 155, 155, 0.5);
-	border-radius: 20px;
-	border: transparent;
 }

@@ -378,47 +378,6 @@ const MAX_LINKS = 30;
 const linksContainer = document.getElementById("links-container");
 
 const initializeLinks = () => {
-	const loadBookmarksFromFile = () => {
-		const input = document.createElement("input");
-		input.type = "file";
-		input.accept = ".json";
-
-		input.addEventListener("change", (event) => {
-			const file = event.target.files[0];
-
-			if (file) {
-				const reader = new FileReader();
-
-				reader.onload = (e) => {
-					try {
-						const data = JSON.parse(e.target.result);
-						localStorage.setItem(LINKS_STORAGE_KEY, JSON.stringify(data));
-					} catch (error) {
-						console.error(error);
-					}
-				};
-
-				reader.onerror = (e) => {
-					console.error(e);
-				};
-
-				reader.readAsText(file);
-				location.reload();
-			}
-		});
-
-		input.click();
-	};
-
-	const saveBookmarksToFile = () => {
-		const bookmarks = localStorage.getItem(LINKS_STORAGE_KEY);
-		const blob = new Blob([bookmarks], { type: "application/json" });
-		const link = document.createElement("a");
-		link.href = URL.createObjectURL(blob);
-		link.download = "bookmarks.json";
-		link.click();
-	};
-
 	const fetchSvgOrDefault = async (name) => {
 		try {
 			const response = await fetch(`assets/icons/icons/${name}.svg`);
@@ -647,16 +606,6 @@ const initializeLinks = () => {
 	});
 
 	initializeGrid();
-
-	document
-		.getElementById("title-button")
-		.addEventListener("click", function (event) {
-			if (event.altKey) {
-				loadBookmarksFromFile();
-			} else if (event.ctrlKey) {
-				saveBookmarksToFile();
-			}
-		});
 };
 
 /**********************/
@@ -765,11 +714,101 @@ const initializeNotepad = () => {
 	syncNotepadWithStorage();
 };
 
+/**********************/
+/*       BACKUP       */
+/**********************/
+function downloadLocalStorage() {
+	const data = JSON.stringify(localStorage);
+	const blob = new Blob([data], { type: "application/json" });
+	const url = URL.createObjectURL(blob);
+
+	const a = document.createElement("a");
+	a.href = url;
+	a.download = "toolstab.config.json";
+	document.body.appendChild(a);
+	a.click();
+	document.body.removeChild(a);
+	URL.revokeObjectURL(url);
+}
+
+function uploadLocalStorage() {
+	const input = document.createElement("input");
+	input.type = "file";
+	input.accept = "application/json";
+	input.style.display = "none";
+
+	input.onchange = function (event) {
+		const file = event.target.files[0];
+		if (!file) return;
+
+		const reader = new FileReader();
+		reader.onload = function (event) {
+			try {
+				const data = JSON.parse(event.target.result);
+				if (typeof data === "object" && data !== null) {
+					for (const [key, value] of Object.entries(data)) {
+						localStorage.setItem(key, value);
+					}
+					location.reload();
+					console.log("LocalStorage caricato con successo!");
+				} else {
+					console.log("Il file non è valido!");
+				}
+			} catch (error) {
+				console.log("Errore durante il caricamento del file!");
+			}
+		};
+		reader.readAsText(file);
+	};
+
+	document.body.appendChild(input);
+	input.click();
+	document.body.removeChild(input);
+}
+
+function initializeBackup() {
+	document
+		.getElementById("calendar-card")
+		.addEventListener("click", function (event) {
+			if (event.altKey) {
+				uploadLocalStorage();
+			} else if (event.ctrlKey) {
+				downloadLocalStorage();
+			}
+		});
+}
+
+/**********************/
+/*        INIT        */
+/**********************/
+
+function initializeLocalStorage() {
+	const initialValues = {
+		dynamicbackground: "true",
+		"clipboard-1": "",
+		"clipboard-2": "",
+		"clipboard-3": "",
+		"clipboard-4": "",
+		"clipboard-5": "",
+		"notepad-content": "",
+		"links-content": "[]",
+		"todolist-content": "[]",
+	};
+
+	for (const [key, value] of Object.entries(initialValues)) {
+		if (localStorage.getItem(key) === null) {
+			localStorage.setItem(key, value);
+		}
+	}
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+	initializeLocalStorage();
 	initializeDynamicBackground();
 	initializeDateTimeAndCalendar();
 	initializeTodoList();
 	initializeLinks();
 	initializeClipboard();
 	initializeNotepad();
+	initializeBackup();
 });

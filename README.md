@@ -31,14 +31,15 @@ Package for manual installation available at the [release page](https://github.c
     - When editing a bookmark, press `Delete` to delete it
   - `click` on a bookmark: open the link in this tab
   - `Ctrl+click` on a bookmark: open the link in a new tab
-  - `Ctrl+click` on the **Bookmarks** title: export the bookmarks to a file
-  - `Alt+click` on the **Bookmarks** title: import a bookmark from a file
 - **Clipboard**: 5 slots for copying and pasting texts
   - `Alt+click`: copy the slot content to the computer clipboard
   - `Ctrl+click`: empty the slot
 - **Notepad**: Take notes
 - **Dynamic background**: The background color changes automatically according to the day/night cycle
   - Enable/disable this feature from the extension popup menu
+- **Configuration**:
+	- `Ctrl+click` on the calendar tile: export the configuration to a file
+  - `Alt+click` on the calendar tile: import a configuration from a file
 
 ## Screenshots
 
