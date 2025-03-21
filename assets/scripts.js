@@ -233,6 +233,7 @@ const initializeTodoList = () => {
 	const loadChecklist = () => {
 		const savedChecklist =
 			JSON.parse(localStorage.getItem(TODO_STORAGE_KEY)) || [];
+		todolist.innerHTML = "";
 		savedChecklist.forEach(({ text, checked }) =>
 			addChecklistItem(text, checked),
 		);
@@ -266,6 +267,39 @@ const initializeTodoList = () => {
 
 		const span = document.createElement("span");
 		span.textContent = text;
+		span.className = "todo-text";
+
+		const moveContainer = document.createElement("div");
+		moveContainer.className = "move-buttons";
+
+		const upBtn = document.createElement("button");
+		upBtn.textContent = "▲";
+		upBtn.className = "move-up";
+
+		const downBtn = document.createElement("button");
+		downBtn.textContent = "▼";
+		downBtn.className = "move-down";
+
+		upBtn.addEventListener("click", () => {
+			const prev = li.previousElementSibling;
+			if (prev) {
+				todolist.insertBefore(li, prev);
+				saveChecklist();
+				updateMoveButtons();
+			}
+		});
+
+		downBtn.addEventListener("click", () => {
+			const next = li.nextElementSibling;
+			if (next) {
+				todolist.insertBefore(next, li);
+				saveChecklist();
+				updateMoveButtons();
+			}
+		});
+
+		moveContainer.appendChild(upBtn);
+		moveContainer.appendChild(downBtn);
 
 		span.addEventListener("click", (event) => {
 			if (span.querySelector("input")) return;
@@ -319,12 +353,37 @@ const initializeTodoList = () => {
 				li.remove();
 				saveChecklist();
 				updateClearButtonVisibility();
+				updateMoveButtons();
 			}
 		});
 
 		li.appendChild(checkbox);
 		li.appendChild(span);
+		li.appendChild(moveContainer);
 		todolist.appendChild(li);
+
+		updateMoveButtons();
+	};
+
+	const updateMoveButtons = () => {
+		const items = Array.from(
+			document.querySelectorAll("#todolist .checklist-item"),
+		);
+		items.forEach((item, index) => {
+			const upBtn = item.querySelector(".move-up");
+			const downBtn = item.querySelector(".move-down");
+
+			if (upBtn) {
+				upBtn.disabled = index === 0;
+				upBtn.style.opacity = upBtn.disabled ? "0.2" : "0.7";
+				upBtn.classList.add("move-btn");
+			}
+			if (downBtn) {
+				downBtn.disabled = index === items.length - 1;
+				downBtn.style.opacity = downBtn.disabled ? "0.2" : "0.7";
+				downBtn.classList.add("move-btn");
+			}
+		});
 	};
 
 	const updateClearButtonVisibility = () => {
@@ -386,7 +445,7 @@ const initializeLinks = () => {
 			}
 			return await response.text();
 		} catch {
-			const defaultResponse = await fetch("assets/icons/icons/default.svg");
+			const defaultResponse = await fetch("assets/icons/default.svg");
 			return await defaultResponse.text();
 		}
 	};
@@ -688,11 +747,22 @@ const initializeClipboard = () => {
 const NOTEPAD_STORAGE_KEY = "notepad-content";
 
 const notepad = document.getElementById("notepad");
+const notepadLines = document.getElementById("notepad-lines");
+
+function updateLinesHeight() {
+	const scrollHeight = notepad.scrollHeight;
+	notepadLines.style.height = scrollHeight + "px";
+}
 
 const initializeNotepad = () => {
 	const loadContent = (element, storageKey) => {
 		const savedContent = localStorage.getItem(storageKey);
 		if (savedContent) element.value = savedContent;
+		notepad.addEventListener("input", updateLinesHeight);
+		notepad.addEventListener("scroll", () => {
+			notepadLines.style.transform = `translateY(-${notepad.scrollTop}px)`;
+		});
+		updateLinesHeight();
 	};
 
 	const saveContent = (element, storageKey) => {

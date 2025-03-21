@@ -90,7 +90,7 @@ body {
 	padding: 20px;
 	border-radius: 15px;
 	background-color: var(--card);
-	transition: all ease 0.2s;
+	transition: background-color ease 0.2s;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 	min-height: 100px;
 	min-width: 20px;
@@ -123,6 +123,7 @@ body {
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(5, 1fr);
 	gap: 10px;
+	padding: 3px;
 	width: 100%;
 	height: 100%;
 	justify-content: center;
@@ -137,14 +138,19 @@ body {
 	font-size: 14px;
 	color: var(--text);
 	background-color: transparent;
-	padding: 5px;
 	gap: 1vh;
 	border: none;
 	border-radius: 10px;
 	cursor: pointer;
-	transition: all 0.2s ease;
+	transition:
+		background-color 0.2s ease,
+		transform 0.05s ease;
 	min-height: 85px;
 	min-width: 85px;
+}
+
+.link-button:active {
+	transform: scale(0.9);
 }
 
 .link-button:hover {
@@ -185,6 +191,32 @@ body {
 	justify-content: center;
 	height: 100%;
 	width: 100%;
+}
+
+.move-buttons {
+	display: flex;
+	flex-direction: column;
+	margin-left: 5px;
+}
+
+.move-buttons button {
+	font-size: 16px;
+	line-height: 1;
+	padding-left: 4px;
+	padding-right: 4px;
+	cursor: pointer;
+	background: none;
+	color: var(--text-dim);
+	border: none;
+}
+
+.move-btn {
+	transition: transform 0.05s ease;
+	cursor: pointer;
+}
+
+.move-btn:active {
+	transform: scale(0.8);
 }
 
 .checklist {
@@ -230,8 +262,8 @@ body {
 	position: relative;
 	top: 1px;
 	transition:
-		background-color 0.3s ease,
-		box-shadow 0.3s ease;
+		background-color 0.2s ease,
+		box-shadow 0.2s ease;
 }
 
 .checklist-item input[type="checkbox"]:hover {
@@ -270,11 +302,47 @@ button img:hover {
 	opacity: 1;
 }
 
-#notepad {
+#notepad-wrapper {
+	position: relative;
 	width: 90%;
 	height: 100%;
-	min-width: 20px;
-	line-height: 1.5;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#notepad-lines {
+	position: absolute;
+	top: -2px;
+	left: 0;
+	right: 0;
+	height: 100%;
+	pointer-events: none;
+	overflow: hidden;
+	z-index: 0;
+	background-image: repeating-linear-gradient(
+		to bottom,
+		transparent 0px,
+		transparent 25px,
+		rgba(255, 255, 255, 0.1) 27px
+	);
+	background-size: 100% 27px;
+}
+
+#notepad {
+	position: relative;
+	width: 98%;
+	height: 100%;
+	font-family: monospace;
+	font-size: 14px;
+	line-height: 27px;
+	border: none;
+	outline: none;
+	z-index: 1;
+	overflow: auto;
+	overflow-y: scroll;
+	overscroll-behavior: none;
 }
 
 textarea {
@@ -319,6 +387,13 @@ textarea {
 	height: 24px;
 	border: none;
 	cursor: pointer;
+	transition:
+		background-color 0.2s ease,
+		transform 0.05s ease;
+}
+
+#clear-completed:active {
+	transform: scale(0.8);
 }
 
 #calendar-container {
@@ -411,6 +486,8 @@ header .calendar-navigation span {
 	color: var(--text);
 	font-size: 1rem;
 	font-weight: bold;
+	transition:
+		background-color 0.2s ease,
 }
 
 header .calendar-navigation span:hover {
@@ -504,7 +581,7 @@ header .calendar-current-date {
 	justify-content: center;
 	font-family: "Ubuntu Mono";
 	color: var(--text);
-	transition: background-color 0.3s ease;
+	transition: background-color 0.2s ease;
 	border-radius: 10px;
 }
 
