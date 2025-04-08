@@ -434,21 +434,39 @@ const initializeTodoList = () => {
 const LINKS_STORAGE_KEY = "links-content";
 const MAX_LINKS = 30;
 
+let iconsData = [];
+
 const linksContainer = document.getElementById("links-container");
+
+const loadIconsData = async () => {
+	if (iconsData.length === 0) {
+		const response = await fetch("assets/icons/icons.json");
+		iconsData = await response.json();
+	}
+};
 
 const initializeLinks = () => {
 	const fetchSvgOrDefault = async (name) => {
 		try {
-			const response = await fetch(`assets/icons/icons/${name}.svg`);
-			if (!response.ok) {
-				throw new Error("SVG not found");
-			}
-			return await response.text();
+			await loadIconsData();
+
+			const match = iconsData.find(
+				(item) =>
+					item.slug.toLowerCase() === name.toLowerCase() ||
+					item.title.toLowerCase() === name.toLowerCase()
+			);
+
+			const slugToUse = match ? match.slug : name;
+
+			const svgResponse = await fetch(`assets/icons/icons/${slugToUse}.svg`);
+			if (!svgResponse.ok) throw new Error("SVG not found");
+
+			return await svgResponse.text();
 		} catch {
 			const defaultResponse = await fetch("assets/icons/default.svg");
 			return await defaultResponse.text();
 		}
-	};
+};
 
 	const handleButtonClick = (event, button) => {
 		event.stopPropagation();
@@ -494,7 +512,11 @@ const initializeLinks = () => {
 					fetch("assets/icons/icons.json")
 						.then((response) => response.json())
 						.then((data) => {
-							const match = data.find((item) => item.name === pair.text1);
+							const match = iconsData.find(
+								(item) =>
+									item.slug.toLowerCase() === pair.text1.toLowerCase() ||
+									item.title.toLowerCase() === pair.text1.toLowerCase()
+							);
 							if (match) {
 								svgElement.setAttribute("fill", `#${match.hex}`);
 							}

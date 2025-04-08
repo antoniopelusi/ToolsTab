@@ -26,13 +26,14 @@ def generate_icons_json(simple_icons_path, slugs_path, output_path):
     icons = []
     for icon in simple_icons:
         title = icon.get("title")
-        hex_code = icon.get("hex")
+        hex = icon.get("hex")
         slug = slugs.get(title)
 
         if slug:
             icons.append({
-                "name": slug,
-                "hex": hex_code,
+            	"title": title,
+                "slug": slug,
+                "hex": hex,
                 "source": f"{slug}.svg"
             })
 
