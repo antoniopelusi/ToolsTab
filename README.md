@@ -24,7 +24,7 @@ Package for manual installation available at the [release page](https://github.c
   - `Ctrl+click` on a todo list item: delete it
 - **Bookmarks**: 15 ordered bookmark slots:
   - `Alt+click` on a bookmark: add/edit a bookmark:
-    - _name_: choose one of the slug names from [`slugs.mg`](utils/slugs.md) to automatically use the corresponding icon
+    - _name_: choose a service name (or one of the slug names from [`slugs.mg`](utils/slugs.md)) to automatically use the corresponding icon
     - _link_: the URL of the bookmark
     - When editing a bookmark, press `Enter` or click somewhere else to save it
     - When editing a bookmark, press `Escape` to abort the operation
