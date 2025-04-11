@@ -6,10 +6,11 @@ Real-time sync across all tabs using browser local storage.
 
 Tools' status is saved in a persistent way.
 
-## Download extension
+## Install extension
 
-- [Firefox](https://addons.mozilla.org/firefox/addon/toolstab/)
-- [Chrome](https://chromewebstore.google.com/detail/toolstab/fejllmaclllnagjgachemaigpheidpep)
+[![Generic badge](https://img.shields.io/badge/Install-Firefox-orange.svg)](https://addons.mozilla.org/firefox/addon/toolstab/)
+
+[![Generic badge](https://img.shields.io/badge/Install-Chrome-blue.svg)](https://chromewebstore.google.com/detail/toolstab/fejllmaclllnagjgachemaigpheidpep)
 
 Package for manual installation available at the [release page](https://github.com/antoniopelusi/ToolsTab/releases/).
 
