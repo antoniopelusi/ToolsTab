@@ -527,7 +527,6 @@ header .calendar-current-date {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	/* margin-top: 0.5vh; */
 	position: relative;
 	z-index: 1;
 	cursor: default;

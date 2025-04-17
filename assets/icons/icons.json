@@ -1388,7 +1388,7 @@
     {
         "title": "ArangoDB",
         "slug": "arangodb",
-        "hex": "DDE072",
+        "hex": "DDDF72",
         "source": "arangodb.svg"
     },
     {
@@ -4760,7 +4760,7 @@
     {
         "title": "Douban Read",
         "slug": "doubanread",
-        "hex": "389EAC",
+        "hex": "24D2C8",
         "source": "doubanread.svg"
     },
     {
@@ -10226,7 +10226,7 @@
     {
         "title": "Manjaro",
         "slug": "manjaro",
-        "hex": "35BF5C",
+        "hex": "35BFA4",
         "source": "manjaro.svg"
     },
     {
