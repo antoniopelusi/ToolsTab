@@ -1,4 +1,4 @@
-VERSION := "1.10"
+VERSION := "1.11"
 OUT_DIR := out
 
 .PHONY: firefox chrome clean
