@@ -1,4 +1,4 @@
-VERSION := "1.11"
+VERSION := "2.0"
 OUT_DIR := out
 
 .PHONY: firefox chrome clean
@@ -6,6 +6,9 @@ OUT_DIR := out
 .SILENT: firefox chrome clean
 
 all: firefox chrome
+
+geticons:
+	python3 utils/geticons.py
 
 firefox:
 	cp firefox_manifest.json manifest.json

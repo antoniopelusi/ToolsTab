@@ -1,127 +1,101 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>New Tab</title>
-		<link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
-		<link rel="stylesheet" href="assets/styles.css" />
-	</head>
-	<body>
-		<div id="flex-container" class="flex-container">
-			<div class="flex-item">
-				<div id="calendar-card" class="card">
-					<div id="calendar-container">
-						<div class="calendar-left">
-							<p id="current-date"></p>
-							<p id="current-time"></p>
-						</div>
-						<div class="calendar-right">
-							<div id="calendar-centered">
-								<div class="calendar">
-									<header class="calendar-header">
-										<p class="calendar-current-date"></p>
-										<div class="calendar-navigation">
-											<span
-												id="calendar-prev"
-												class="material-symbols-rounded"
-											>
-												<
-											</span>
-											<span
-												id="calendar-next"
-												class="material-symbols-rounded"
-											>
-												>
-											</span>
-										</div>
-									</header>
-
-									<div class="calendar-body">
-										<ul class="calendar-weekdays">
-											<li>Mon</li>
-											<li>Tue</li>
-											<li>Wed</li>
-											<li>Thu</li>
-											<li>Fri</li>
-											<li>Sat</li>
-											<li>Sun</li>
-										</ul>
-										<ul class="calendar-dates"></ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="flex-item">
-				<div class="card">
-					<button id="clear-completed">
-						<img src="assets/icons/delete.svg" />
-					</button>
-					<p id="title">Todo list</p>
-					<div id="todolist-container">
-						<ul id="todolist" class="checklist"></ul>
-					</div>
-					<input type="text" id="new-todo" placeholder="Add task" />
-				</div>
-			</div>
-			<div class="flex-item">
-				<div class="card left">
-					<p id="title">Bookmarks</p>
-					<div id="links-container" class="links-grid"></div>
-				</div>
-				<div class="card right">
-					<p id="title">Clipboard</p>
-					<div id="clipboard-container">
-						<div>
-							<textarea
-								id="clipboard-1"
-								spellcheck="false"
-							></textarea>
-						</div>
-						<div>
-							<textarea
-								id="clipboard-2"
-								spellcheck="false"
-							></textarea>
-						</div>
-						<div>
-							<textarea
-								id="clipboard-3"
-								spellcheck="false"
-							></textarea>
-						</div>
-						<div>
-							<textarea
-								id="clipboard-4"
-								spellcheck="false"
-							></textarea>
-						</div>
-						<div>
-							<textarea
-								id="clipboard-5"
-								spellcheck="false"
-							></textarea>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="flex-item">
-				<div class="card">
-					<p id="title">Notepad</p>
-					<div id="notepad-wrapper">
-						<div id="notepad-lines"></div>
-						<textarea id="notepad" spellcheck="false"></textarea>
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
-	<script
-		language="JavaScript"
-		type="text/javascript"
-		src="assets/scripts.js"
-	></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>New Tab</title>
+        <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
+        <script src="assets/js/bg.js"></script>
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script type="module" src="assets/js/scripts.js"></script>
+        <link rel="stylesheet" href="assets/css/solarsystem.css" />
+    </head>
+    <body>
+        <main>
+            <section>
+                <div>
+                    <div>
+                        <div id="date-display"></div>
+                        <div id="day-display"></div>
+                    </div>
+                    <div>
+                        <div id="time-display"></div>
+                    </div>
+                </div>
+                <div class="solar-system"></div>
+            </section>
+            <section>
+                <img
+                    src="assets/icons/delete.svg"
+                    alt="Clear completed"
+                    id="clear-completed"
+                />
+                <h2>To-Do List</h2>
+                <ul id="todo-list"></ul>
+                <input
+                    type="text"
+                    id="todo-input"
+                    placeholder="Add new task"
+                    autocomplete="off"
+                    spellcheck="false"
+                    autocorrect="off"
+                    autocapitalize="off"
+                />
+            </section>
+            <section>
+                <h2>Bookmarks</h2>
+                <div id="bookmarks-grid"></div>
+            </section>
+            <section>
+                <h2>Clipboard</h2>
+                <div>
+                    <textarea
+                        id="clip-slot-1"
+                        autocomplete="off"
+                        spellcheck="false"
+                        autocorrect="off"
+                        autocapitalize="off"
+                    ></textarea>
+                    <textarea
+                        id="clip-slot-2"
+                        autocomplete="off"
+                        spellcheck="false"
+                        autocorrect="off"
+                        autocapitalize="off"
+                    ></textarea>
+                    <textarea
+                        id="clip-slot-3"
+                        autocomplete="off"
+                        spellcheck="false"
+                        autocorrect="off"
+                        autocapitalize="off"
+                    ></textarea>
+                    <textarea
+                        id="clip-slot-4"
+                        autocomplete="off"
+                        spellcheck="false"
+                        autocorrect="off"
+                        autocapitalize="off"
+                    ></textarea>
+                    <textarea
+                        id="clip-slot-5"
+                        autocomplete="off"
+                        spellcheck="false"
+                        autocorrect="off"
+                        autocapitalize="off"
+                    ></textarea>
+                </div>
+            </section>
+            <section>
+                <h2>Notepad</h2>
+                <textarea
+                    id="notepad"
+                    autocomplete="off"
+                    spellcheck="false"
+                    autocorrect="off"
+                    autocapitalize="off"
+                ></textarea>
+            </section>
+        </main>
+    </body>
 </html>

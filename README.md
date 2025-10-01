@@ -16,7 +16,7 @@ Package for manual installation available at the [release page](https://github.c
 
 ## Tools and usage
 
-- **Calendar**: visualize day, time and calendar
+- **Day/Time**: visualize day and time
 - **Todo list**: manage tasks:
 	- `Alt+click` on a todo list item: add/edit a bookmark:
     - When editing a todo list item, press `Enter` or click somewhere else to save it
@@ -39,8 +39,8 @@ Package for manual installation available at the [release page](https://github.c
 - **Dynamic background**: The background color changes automatically according to the day/night cycle
   - Enable/disable this feature from the extension popup menu
 - **Configuration**:
-	- `Ctrl+click` on the calendar tile: export the configuration to a file
-  - `Alt+click` on the calendar tile: import a configuration from a file
+	- `Ctrl+click` on the day/time tile: export the configuration to a file
+  - `Alt+click` on the day/time tile: import a configuration from a file
 
 ## Screenshots
 

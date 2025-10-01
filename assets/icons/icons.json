@@ -126,10 +126,16 @@
         "source": "aframe.svg"
     },
     {
-        "title": "ABB RobotStudio",
-        "slug": "abbrobotstudio",
-        "hex": "FF9E0F",
-        "source": "abbrobotstudio.svg"
+        "title": "AB Download Manager",
+        "slug": "abdownloadmanager",
+        "hex": "897BFF",
+        "source": "abdownloadmanager.svg"
+    },
+    {
+        "title": "ABB",
+        "slug": "abb",
+        "hex": "FF000F",
+        "source": "abb.svg"
     },
     {
         "title": "Abbott",
@@ -200,8 +206,14 @@
     {
         "title": "ActiGraph",
         "slug": "actigraph",
-        "hex": "0B2C4A",
+        "hex": "3A4259",
         "source": "actigraph.svg"
+    },
+    {
+        "title": "Activeloop",
+        "slug": "activeloop",
+        "hex": "FFB746",
+        "source": "activeloop.svg"
     },
     {
         "title": "Activision",
@@ -234,10 +246,22 @@
         "source": "acura.svg"
     },
     {
+        "title": "Ada",
+        "slug": "ada",
+        "hex": "000000",
+        "source": "ada.svg"
+    },
+    {
         "title": "Adafruit",
         "slug": "adafruit",
         "hex": "000000",
         "source": "adafruit.svg"
+    },
+    {
+        "title": "AdAway",
+        "slug": "adaway",
+        "hex": "B71C1C",
+        "source": "adaway.svg"
     },
     {
         "title": "AdBlock",
@@ -642,6 +666,12 @@
         "source": "alipay.svg"
     },
     {
+        "title": "AList",
+        "slug": "alist",
+        "hex": "70C6BE",
+        "source": "alist.svg"
+    },
+    {
         "title": "Allegro",
         "slug": "allegro",
         "hex": "FF5A00",
@@ -712,162 +742,6 @@
         "slug": "alx",
         "hex": "002B56",
         "source": "alx.svg"
-    },
-    {
-        "title": "Amazon",
-        "slug": "amazon",
-        "hex": "FF9900",
-        "source": "amazon.svg"
-    },
-    {
-        "title": "Amazon Alexa",
-        "slug": "amazonalexa",
-        "hex": "00CAFF",
-        "source": "amazonalexa.svg"
-    },
-    {
-        "title": "Amazon API Gateway",
-        "slug": "amazonapigateway",
-        "hex": "FF4F8B",
-        "source": "amazonapigateway.svg"
-    },
-    {
-        "title": "Amazon CloudWatch",
-        "slug": "amazoncloudwatch",
-        "hex": "FF4F8B",
-        "source": "amazoncloudwatch.svg"
-    },
-    {
-        "title": "Amazon Cognito",
-        "slug": "amazoncognito",
-        "hex": "DD344C",
-        "source": "amazoncognito.svg"
-    },
-    {
-        "title": "Amazon DocumentDB",
-        "slug": "amazondocumentdb",
-        "hex": "C925D1",
-        "source": "amazondocumentdb.svg"
-    },
-    {
-        "title": "Amazon DynamoDB",
-        "slug": "amazondynamodb",
-        "hex": "4053D6",
-        "source": "amazondynamodb.svg"
-    },
-    {
-        "title": "Amazon EC2",
-        "slug": "amazonec2",
-        "hex": "FF9900",
-        "source": "amazonec2.svg"
-    },
-    {
-        "title": "Amazon ECS",
-        "slug": "amazonecs",
-        "hex": "FF9900",
-        "source": "amazonecs.svg"
-    },
-    {
-        "title": "Amazon EKS",
-        "slug": "amazoneks",
-        "hex": "FF9900",
-        "source": "amazoneks.svg"
-    },
-    {
-        "title": "Amazon ElastiCache",
-        "slug": "amazonelasticache",
-        "hex": "C925D1",
-        "source": "amazonelasticache.svg"
-    },
-    {
-        "title": "Amazon Fire TV",
-        "slug": "amazonfiretv",
-        "hex": "FC4C02",
-        "source": "amazonfiretv.svg"
-    },
-    {
-        "title": "Amazon Games",
-        "slug": "amazongames",
-        "hex": "FF9900",
-        "source": "amazongames.svg"
-    },
-    {
-        "title": "Amazon Identity Access Management",
-        "slug": "amazoniam",
-        "hex": "DD344C",
-        "source": "amazoniam.svg"
-    },
-    {
-        "title": "Amazon Lumberyard",
-        "slug": "amazonlumberyard",
-        "hex": "66459B",
-        "source": "amazonlumberyard.svg"
-    },
-    {
-        "title": "Amazon Luna",
-        "slug": "amazonluna",
-        "hex": "9146FF",
-        "source": "amazonluna.svg"
-    },
-    {
-        "title": "Amazon Music",
-        "slug": "amazonmusic",
-        "hex": "46C3D0",
-        "source": "amazonmusic.svg"
-    },
-    {
-        "title": "Amazon Pay",
-        "slug": "amazonpay",
-        "hex": "FF9900",
-        "source": "amazonpay.svg"
-    },
-    {
-        "title": "Amazon Prime",
-        "slug": "amazonprime",
-        "hex": "00A8E1",
-        "source": "amazonprime.svg"
-    },
-    {
-        "title": "Amazon RDS",
-        "slug": "amazonrds",
-        "hex": "527FFF",
-        "source": "amazonrds.svg"
-    },
-    {
-        "title": "Amazon Redshift",
-        "slug": "amazonredshift",
-        "hex": "8C4FFF",
-        "source": "amazonredshift.svg"
-    },
-    {
-        "title": "Amazon Route 53",
-        "slug": "amazonroute53",
-        "hex": "8C4FFF",
-        "source": "amazonroute53.svg"
-    },
-    {
-        "title": "Amazon S3",
-        "slug": "amazons3",
-        "hex": "569A31",
-        "source": "amazons3.svg"
-    },
-    {
-        "title": "Amazon Simple Email Service",
-        "slug": "amazonsimpleemailservice",
-        "hex": "DD344C",
-        "source": "amazonsimpleemailservice.svg"
-    },
-    {
-        "title": "Amazon SQS",
-        "slug": "amazonsqs",
-        "hex": "FF4F8B",
-        "source": "amazonsqs.svg"
-    },
-    {
-        "title": "Amazon Web Services",
-        "slug": "amazonwebservices",
-        "hex": "232F3E",
-        "source": "amazonwebservices.svg"
     },
     {
         "title": "AMD",
@@ -1020,6 +894,12 @@
         "source": "antena3.svg"
     },
     {
+        "title": "AntennaPod",
+        "slug": "antennapod",
+        "hex": "364FF3",
+        "source": "antennapod.svg"
+    },
+    {
         "title": "Anthropic",
         "slug": "anthropic",
         "hex": "191919",
@@ -1048,12 +928,6 @@
         "slug": "anytype",
         "hex": "FF6A7B",
         "source": "anytype.svg"
-    },
-    {
-        "title": "AOL",
-        "slug": "aol",
-        "hex": "3399FF",
-        "source": "aol.svg"
     },
     {
         "title": "Apache",
@@ -1102,6 +976,12 @@
         "slug": "apachedolphinscheduler",
         "hex": "85CDF0",
         "source": "apachedolphinscheduler.svg"
+    },
+    {
+        "title": "Apache Doris",
+        "slug": "apachedoris",
+        "hex": "444FD9",
+        "source": "apachedoris.svg"
     },
     {
         "title": "Apache Druid",
@@ -1544,7 +1424,7 @@
     {
         "title": "AssemblyScript",
         "slug": "assemblyscript",
-        "hex": "007AAC",
+        "hex": "007ACC",
         "source": "assemblyscript.svg"
     },
     {
@@ -1752,6 +1632,12 @@
         "source": "avajs.svg"
     },
     {
+        "title": "AvaloniaUI",
+        "slug": "avaloniaui",
+        "hex": "165BFF",
+        "source": "avaloniaui.svg"
+    },
+    {
         "title": "Avast",
         "slug": "avast",
         "hex": "FF7800",
@@ -1770,6 +1656,12 @@
         "source": "avira.svg"
     },
     {
+        "title": "AVM",
+        "slug": "avm",
+        "hex": "E2001A",
+        "source": "avm.svg"
+    },
+    {
         "title": "Awesome Lists",
         "slug": "awesomelists",
         "hex": "FC60A8",
@@ -1782,42 +1674,6 @@
         "source": "awesomewm.svg"
     },
     {
-        "title": "AWS Amplify",
-        "slug": "awsamplify",
-        "hex": "FF9900",
-        "source": "awsamplify.svg"
-    },
-    {
-        "title": "AWS Elastic Load Balancing",
-        "slug": "awselasticloadbalancing",
-        "hex": "8C4FFF",
-        "source": "awselasticloadbalancing.svg"
-    },
-    {
-        "title": "AWS Fargate",
-        "slug": "awsfargate",
-        "hex": "FF9900",
-        "source": "awsfargate.svg"
-    },
-    {
-        "title": "AWS Lambda",
-        "slug": "awslambda",
-        "hex": "FF9900",
-        "source": "awslambda.svg"
-    },
-    {
-        "title": "AWS Organizations",
-        "slug": "awsorganizations",
-        "hex": "E7157B",
-        "source": "awsorganizations.svg"
-    },
-    {
-        "title": "AWS Secrets Manager",
-        "slug": "awssecretsmanager",
-        "hex": "DD344C",
-        "source": "awssecretsmanager.svg"
-    },
-    {
         "title": "Awwwards",
         "slug": "awwwards",
         "hex": "222222",
@@ -1828,6 +1684,12 @@
         "slug": "axios",
         "hex": "5A29E4",
         "source": "axios.svg"
+    },
+    {
+        "title": "Axis Bank",
+        "slug": "axisbank",
+        "hex": "971A4D",
+        "source": "axisbank.svg"
     },
     {
         "title": "B&R Automation",
@@ -1879,9 +1741,15 @@
     },
     {
         "title": "Backstage",
-        "slug": "backstage",
+        "slug": "backstage_casting",
         "hex": "9BF0E1",
-        "source": "backstage.svg"
+        "source": "backstage_casting.svg"
+    },
+    {
+        "title": "Backstage",
+        "slug": "backstage_casting",
+        "hex": "000000",
+        "source": "backstage_casting.svg"
     },
     {
         "title": "Badoo",
@@ -2088,6 +1956,12 @@
         "source": "betfair.svg"
     },
     {
+        "title": "Better Auth",
+        "slug": "betterauth",
+        "hex": "FFFFFF",
+        "source": "betterauth.svg"
+    },
+    {
         "title": "Better Stack",
         "slug": "betterstack",
         "hex": "000000",
@@ -2244,6 +2118,12 @@
         "source": "bitwig.svg"
     },
     {
+        "title": "Black",
+        "slug": "black",
+        "hex": "000000",
+        "source": "black.svg"
+    },
+    {
         "title": "Blackberry",
         "slug": "blackberry",
         "hex": "000000",
@@ -2272,6 +2152,12 @@
         "slug": "blender",
         "hex": "E87D0D",
         "source": "blender.svg"
+    },
+    {
+        "title": "Blibli",
+        "slug": "blibli",
+        "hex": "0072FF",
+        "source": "blibli.svg"
     },
     {
         "title": "Blockbench",
@@ -2364,6 +2250,12 @@
         "source": "boeing.svg"
     },
     {
+        "title": "Bohemia Interactive",
+        "slug": "bohemiainteractive",
+        "hex": "6BA539",
+        "source": "bohemiainteractive.svg"
+    },
+    {
         "title": "Bombardier",
         "slug": "bombardier",
         "hex": "000000",
@@ -2380,6 +2272,12 @@
         "slug": "bookbub",
         "hex": "F44336",
         "source": "bookbub.svg"
+    },
+    {
+        "title": "Booking.com",
+        "slug": "bookingdotcom",
+        "hex": "003A9A",
+        "source": "bookingdotcom.svg"
     },
     {
         "title": "Bookmeter",
@@ -2476,6 +2374,18 @@
         "slug": "braintree",
         "hex": "000000",
         "source": "braintree.svg"
+    },
+    {
+        "title": "Braintrust",
+        "slug": "braintrust",
+        "hex": "000000",
+        "source": "braintrust.svg"
+    },
+    {
+        "title": "Brandfetch",
+        "slug": "brandfetch",
+        "hex": "0084FF",
+        "source": "brandfetch.svg"
     },
     {
         "title": "Brandfolder",
@@ -2592,12 +2502,6 @@
         "source": "bugcrowd.svg"
     },
     {
-        "title": "Bugsnag",
-        "slug": "bugsnag",
-        "hex": "4949E4",
-        "source": "bugsnag.svg"
-    },
-    {
         "title": "Buhl",
         "slug": "buhl",
         "hex": "023E84",
@@ -2638,6 +2542,12 @@
         "slug": "bungie",
         "hex": "0075BB",
         "source": "bungie.svg"
+    },
+    {
+        "title": "bunny.net",
+        "slug": "bunnydotnet",
+        "hex": "FFAA49",
+        "source": "bunnydotnet.svg"
     },
     {
         "title": "bunq",
@@ -2838,6 +2748,12 @@
         "source": "cardano.svg"
     },
     {
+        "title": "Cardmarket",
+        "slug": "cardmarket",
+        "hex": "012169",
+        "source": "cardmarket.svg"
+    },
+    {
         "title": "Carlsberg Group",
         "slug": "carlsberggroup",
         "hex": "00321E",
@@ -2978,8 +2894,14 @@
     {
         "title": "Chakra UI",
         "slug": "chakraui",
-        "hex": "319795",
+        "hex": "1BB2A9",
         "source": "chakraui.svg"
+    },
+    {
+        "title": "Change Detection",
+        "slug": "changedetection",
+        "hex": "3056D3",
+        "source": "changedetection.svg"
     },
     {
         "title": "Channel 4",
@@ -3112,12 +3034,6 @@
         "slug": "chromewebstore",
         "hex": "4285F4",
         "source": "chromewebstore.svg"
-    },
-    {
-        "title": "Chromecast",
-        "slug": "chromecast",
-        "hex": "999999",
-        "source": "chromecast.svg"
     },
     {
         "title": "Chrysler",
@@ -3282,6 +3198,12 @@
         "source": "cloudfoundry.svg"
     },
     {
+        "title": "Cloud Native Build",
+        "slug": "cloudnativebuild",
+        "hex": "F76945",
+        "source": "cloudnativebuild.svg"
+    },
+    {
         "title": "CloudBees",
         "slug": "cloudbees",
         "hex": "1997B5",
@@ -3394,6 +3316,12 @@
         "slug": "coop",
         "hex": "00B1E7",
         "source": "coop.svg"
+    },
+    {
+        "title": "cobalt",
+        "slug": "cobalt",
+        "hex": "FFFFFF",
+        "source": "cobalt.svg"
     },
     {
         "title": "Coca-Cola",
@@ -3510,12 +3438,6 @@
         "source": "codeigniter.svg"
     },
     {
-        "title": "Codeium",
-        "slug": "codeium",
-        "hex": "09B6A2",
-        "source": "codeium.svg"
-    },
-    {
         "title": "Codemagic",
         "slug": "codemagic",
         "hex": "F45E3F",
@@ -3554,8 +3476,14 @@
     {
         "title": "Coder",
         "slug": "coder",
-        "hex": "000000",
+        "hex": "090B0B",
         "source": "coder.svg"
+    },
+    {
+        "title": "CodeRabbit",
+        "slug": "coderabbit",
+        "hex": "FF570A",
+        "source": "coderabbit.svg"
     },
     {
         "title": "CodersRank",
@@ -3634,12 +3562,6 @@
         "slug": "cognizant",
         "hex": "1A4CA1",
         "source": "cognizant.svg"
-    },
-    {
-        "title": "cohost",
-        "slug": "cohost",
-        "hex": "83254F",
-        "source": "cohost.svg"
     },
     {
         "title": "Coinbase",
@@ -4022,7 +3944,7 @@
     {
         "title": "Crunchyroll",
         "slug": "crunchyroll",
-        "hex": "F47521",
+        "hex": "FF5E00",
         "source": "crunchyroll.svg"
     },
     {
@@ -4078,12 +4000,6 @@
         "slug": "csswizardry",
         "hex": "F43059",
         "source": "csswizardry.svg"
-    },
-    {
-        "title": "CSS3",
-        "slug": "css3",
-        "hex": "1572B6",
-        "source": "css3.svg"
     },
     {
         "title": "CTS",
@@ -4416,6 +4332,12 @@
         "source": "deepl.svg"
     },
     {
+        "title": "DeepMind",
+        "slug": "deepmind",
+        "hex": "4285F4",
+        "source": "deepmind.svg"
+    },
+    {
         "title": "Deepnote",
         "slug": "deepnote",
         "hex": "3793EF",
@@ -4632,6 +4554,12 @@
         "source": "discord.svg"
     },
     {
+        "title": "discord.js",
+        "slug": "discorddotjs",
+        "hex": "5865F2",
+        "source": "discorddotjs.svg"
+    },
+    {
         "title": "Discourse",
         "slug": "discourse",
         "hex": "000000",
@@ -4654,6 +4582,12 @@
         "slug": "disroot",
         "hex": "50162D",
         "source": "disroot.svg"
+    },
+    {
+        "title": "Distrobox",
+        "slug": "distrobox",
+        "hex": "4F433C",
+        "source": "distrobox.svg"
     },
     {
         "title": "Distrokid",
@@ -4690,6 +4624,12 @@
         "slug": "dm",
         "hex": "002878",
         "source": "dm.svg"
+    },
+    {
+        "title": "DMM",
+        "slug": "dmm",
+        "hex": "000000",
+        "source": "dmm.svg"
     },
     {
         "title": "Docker",
@@ -4738,6 +4678,18 @@
         "slug": "dolby",
         "hex": "000000",
         "source": "dolby.svg"
+    },
+    {
+        "title": "Dolibarr",
+        "slug": "dolibarr",
+        "hex": "263C5C",
+        "source": "dolibarr.svg"
+    },
+    {
+        "title": "Dolphin",
+        "slug": "dolphin",
+        "hex": "00AAFF",
+        "source": "dolphin.svg"
     },
     {
         "title": "DoorDash",
@@ -5238,28 +5190,28 @@
         "source": "emlakjet.svg"
     },
     {
-        "title": "Empire Kred",
-        "slug": "empirekred",
-        "hex": "72BE50",
-        "source": "empirekred.svg"
-    },
-    {
         "title": "EndeavourOS",
         "slug": "endeavouros",
         "hex": "7F7FFF",
         "source": "endeavouros.svg"
     },
     {
-        "title": "Engadget",
-        "slug": "engadget",
-        "hex": "000000",
-        "source": "engadget.svg"
-    },
-    {
         "title": "Enpass",
         "slug": "enpass",
         "hex": "0D47A1",
         "source": "enpass.svg"
+    },
+    {
+        "title": "ENS",
+        "slug": "ens",
+        "hex": "0080BC",
+        "source": "ens.svg"
+    },
+    {
+        "title": "Ente",
+        "slug": "ente",
+        "hex": "00BC45",
+        "source": "ente.svg"
     },
     {
         "title": "EnterpriseDB",
@@ -5424,16 +5376,16 @@
         "source": "eventstore.svg"
     },
     {
-        "title": "Eventbrite",
-        "slug": "eventbrite",
-        "hex": "F05537",
-        "source": "eventbrite.svg"
-    },
-    {
         "title": "Evernote",
         "slug": "evernote",
         "hex": "00A82D",
         "source": "evernote.svg"
+    },
+    {
+        "title": "Every.org",
+        "slug": "everydotorg",
+        "hex": "2BD7B0",
+        "source": "everydotorg.svg"
     },
     {
         "title": "Excalidraw",
@@ -5512,12 +5464,6 @@
         "slug": "fdroid",
         "hex": "1976D2",
         "source": "fdroid.svg"
-    },
-    {
-        "title": "F-Secure",
-        "slug": "fsecure",
-        "hex": "00BAFF",
-        "source": "fsecure.svg"
     },
     {
         "title": "F#",
@@ -5900,7 +5846,7 @@
     {
         "title": "Flask",
         "slug": "flask",
-        "hex": "000000",
+        "hex": "3BABC3",
         "source": "flask.svg"
     },
     {
@@ -5956,6 +5902,12 @@
         "slug": "flood",
         "hex": "4285F4",
         "source": "flood.svg"
+    },
+    {
+        "title": "Floorp",
+        "slug": "floorp",
+        "hex": "5309E8",
+        "source": "floorp.svg"
     },
     {
         "title": "Fluent Bit",
@@ -6018,6 +5970,12 @@
         "source": "folium.svg"
     },
     {
+        "title": "Folo",
+        "slug": "folo",
+        "hex": "FF5C00",
+        "source": "folo.svg"
+    },
+    {
         "title": "Fonoma",
         "slug": "fonoma",
         "hex": "02B78F",
@@ -6064,6 +6022,12 @@
         "slug": "forgejo",
         "hex": "FB923C",
         "source": "forgejo.svg"
+    },
+    {
+        "title": "Formbricks",
+        "slug": "formbricks",
+        "hex": "00C4B8",
+        "source": "formbricks.svg"
     },
     {
         "title": "Formik",
@@ -6234,10 +6198,34 @@
         "source": "freepik.svg"
     },
     {
+        "title": "FreeTube",
+        "slug": "freetube",
+        "hex": "F04242",
+        "source": "freetube.svg"
+    },
+    {
         "title": "Fresh",
         "slug": "fresh",
         "hex": "FFDB1E",
         "source": "fresh.svg"
+    },
+    {
+        "title": "FreshRSS",
+        "slug": "freshrss",
+        "hex": "0062BE",
+        "source": "freshrss.svg"
+    },
+    {
+        "title": "Frigate",
+        "slug": "frigate",
+        "hex": "000000",
+        "source": "frigate.svg"
+    },
+    {
+        "title": "FRITZ!",
+        "slug": "fritz",
+        "hex": "E2001A",
+        "source": "fritz.svg"
     },
     {
         "title": "Frontend Mentor",
@@ -6482,7 +6470,7 @@
     {
         "title": "GIMP",
         "slug": "gimp",
-        "hex": "5C5543",
+        "hex": "8C8073",
         "source": "gimp.svg"
     },
     {
@@ -6526,6 +6514,12 @@
         "slug": "gitbook",
         "hex": "BBDDE5",
         "source": "gitbook.svg"
+    },
+    {
+        "title": "GitCode",
+        "slug": "gitcode",
+        "hex": "DA203E",
+        "source": "gitcode.svg"
     },
     {
         "title": "Gitconnected",
@@ -6762,12 +6756,6 @@
         "source": "goland.svg"
     },
     {
-        "title": "GoldenLine",
-        "slug": "goldenline",
-        "hex": "FFE005",
-        "source": "goldenline.svg"
-    },
-    {
         "title": "Goldman Sachs",
         "slug": "goldmansachs",
         "hex": "7399C6",
@@ -6776,7 +6764,7 @@
     {
         "title": "Goodreads",
         "slug": "goodreads",
-        "hex": "372213",
+        "hex": "1E1914",
         "source": "goodreads.svg"
     },
     {
@@ -6858,6 +6846,12 @@
         "source": "googlecardboard.svg"
     },
     {
+        "title": "Google Cast",
+        "slug": "googlecast",
+        "hex": "4285F4",
+        "source": "googlecast.svg"
+    },
+    {
         "title": "Google Chat",
         "slug": "googlechat",
         "hex": "34A853",
@@ -6916,12 +6910,6 @@
         "slug": "googlecontaineroptimizedos",
         "hex": "4285F4",
         "source": "googlecontaineroptimizedos.svg"
-    },
-    {
-        "title": "Google Data Studio",
-        "slug": "googledatastudio",
-        "hex": "669DF6",
-        "source": "googledatastudio.svg"
     },
     {
         "title": "Google Dataflow",
@@ -7098,6 +7086,12 @@
         "source": "googlestreetview.svg"
     },
     {
+        "title": "Google Summer of Code",
+        "slug": "googlesummerofcode",
+        "hex": "F9AB00",
+        "source": "googlesummerofcode.svg"
+    },
+    {
         "title": "Google Tag Manager",
         "slug": "googletagmanager",
         "hex": "246FDB",
@@ -7116,10 +7110,22 @@
         "source": "googletranslate.svg"
     },
     {
+        "title": "Google TV",
+        "slug": "googletv",
+        "hex": "4285F4",
+        "source": "googletv.svg"
+    },
+    {
         "title": "GoToMeeting",
         "slug": "gotomeeting",
         "hex": "F68D2E",
         "source": "gotomeeting.svg"
+    },
+    {
+        "title": "GPLv3",
+        "slug": "gplv3",
+        "hex": "BD0000",
+        "source": "gplv3.svg"
     },
     {
         "title": "Grab",
@@ -7254,22 +7260,28 @@
         "source": "groupon.svg"
     },
     {
-        "title": "Grubhub",
-        "slug": "grubhub",
-        "hex": "F63440",
-        "source": "grubhub.svg"
-    },
-    {
         "title": "Grunt",
         "slug": "grunt",
         "hex": "FAA918",
         "source": "grunt.svg"
     },
     {
+        "title": "GSAP",
+        "slug": "gsap",
+        "hex": "0AE448",
+        "source": "gsap.svg"
+    },
+    {
         "title": "GSK",
         "slug": "gsk",
         "hex": "F36633",
         "source": "gsk.svg"
+    },
+    {
+        "title": "GSMA",
+        "slug": "gsma",
+        "hex": "DC002B",
+        "source": "gsma.svg"
     },
     {
         "title": "GSMArena.com",
@@ -7496,8 +7508,14 @@
     {
         "title": "Have I Been Pwned",
         "slug": "haveibeenpwned",
-        "hex": "2A6379",
+        "hex": "030304",
         "source": "haveibeenpwned.svg"
+    },
+    {
+        "title": "Havells",
+        "slug": "havells",
+        "hex": "ED1C24",
+        "source": "havells.svg"
     },
     {
         "title": "Haxe",
@@ -7506,10 +7524,22 @@
         "source": "haxe.svg"
     },
     {
+        "title": "Haystack",
+        "slug": "haystack",
+        "hex": "0EAF9C",
+        "source": "haystack.svg"
+    },
+    {
         "title": "HBO",
         "slug": "hbo",
         "hex": "000000",
         "source": "hbo.svg"
+    },
+    {
+        "title": "HBO Max",
+        "slug": "hbomax",
+        "hex": "000000",
+        "source": "hbomax.svg"
     },
     {
         "title": "HCL",
@@ -7558,6 +7588,12 @@
         "slug": "hedera",
         "hex": "222222",
         "source": "hedera.svg"
+    },
+    {
+        "title": "HedgeDoc",
+        "slug": "hedgedoc",
+        "hex": "B51F08",
+        "source": "hedgedoc.svg"
     },
     {
         "title": "Helium",
@@ -7620,10 +7656,22 @@
         "source": "hermes.svg"
     },
     {
+        "title": "Heroic Games Launcher",
+        "slug": "heroicgameslauncher",
+        "hex": "4B93FF",
+        "source": "heroicgameslauncher.svg"
+    },
+    {
         "title": "Heroku",
         "slug": "heroku",
         "hex": "430098",
         "source": "heroku.svg"
+    },
+    {
+        "title": "HeroUI",
+        "slug": "heroui",
+        "hex": "000000",
+        "source": "heroui.svg"
     },
     {
         "title": "Hetzner",
@@ -8054,7 +8102,7 @@
     {
         "title": "Iconify",
         "slug": "iconify",
-        "hex": "1769AA",
+        "hex": "026C9C",
         "source": "iconify.svg"
     },
     {
@@ -8130,6 +8178,12 @@
         "source": "iledefrancemobilites.svg"
     },
     {
+        "title": "iLovePDF",
+        "slug": "ilovepdf",
+        "hex": "E5322D",
+        "source": "ilovepdf.svg"
+    },
+    {
         "title": "Image.sc",
         "slug": "imagedotsc",
         "hex": "039CB2",
@@ -8164,6 +8218,12 @@
         "slug": "immer",
         "hex": "00E7C3",
         "source": "immer.svg"
+    },
+    {
+        "title": "Immersive Translate",
+        "slug": "immersivetranslate",
+        "hex": "EA4C89",
+        "source": "immersivetranslate.svg"
     },
     {
         "title": "Immich",
@@ -8226,6 +8286,12 @@
         "source": "infiniti.svg"
     },
     {
+        "title": "InfinityFree",
+        "slug": "infinityfree",
+        "hex": "7738C8",
+        "source": "infinityfree.svg"
+    },
+    {
         "title": "InfluxDB",
         "slug": "influxdb",
         "hex": "22ADF6",
@@ -8284,6 +8350,12 @@
         "slug": "inoreader",
         "hex": "1875F3",
         "source": "inoreader.svg"
+    },
+    {
+        "title": "Inquirer",
+        "slug": "inquirer",
+        "hex": "F0DB4F",
+        "source": "inquirer.svg"
     },
     {
         "title": "Insomnia",
@@ -8406,6 +8478,12 @@
         "source": "intuit.svg"
     },
     {
+        "title": "Invidious",
+        "slug": "invidious",
+        "hex": "00B6F0",
+        "source": "invidious.svg"
+    },
+    {
         "title": "InVision",
         "slug": "invision",
         "hex": "FF3366",
@@ -8472,6 +8550,12 @@
         "source": "isc2.svg"
     },
     {
+        "title": "ISRO",
+        "slug": "isro",
+        "hex": "F58220",
+        "source": "isro.svg"
+    },
+    {
         "title": "Issuu",
         "slug": "issuu",
         "hex": "F36D5D",
@@ -8532,12 +8616,6 @@
         "source": "jaguar.svg"
     },
     {
-        "title": "Jamboard",
-        "slug": "jamboard",
-        "hex": "F37C20",
-        "source": "jamboard.svg"
-    },
-    {
         "title": "Jameson",
         "slug": "jameson",
         "hex": "004027",
@@ -8578,6 +8656,12 @@
         "slug": "jcb",
         "hex": "0B4EA2",
         "source": "jcb.svg"
+    },
+    {
+        "title": "JDoodle",
+        "slug": "jdoodle",
+        "hex": "FD5200",
+        "source": "jdoodle.svg"
     },
     {
         "title": "Jeep",
@@ -8654,7 +8738,7 @@
     {
         "title": "Jinja",
         "slug": "jinja",
-        "hex": "B41717",
+        "hex": "7E0C1B",
         "source": "jinja.svg"
     },
     {
@@ -8822,7 +8906,7 @@
     {
         "title": "Just Eat",
         "slug": "justeat",
-        "hex": "F36D00",
+        "hex": "FF8000",
         "source": "justeat.svg"
     },
     {
@@ -8940,6 +9024,12 @@
         "source": "kde.svg"
     },
     {
+        "title": "KDE neon",
+        "slug": "kdeneon",
+        "hex": "3DC08D",
+        "source": "kdeneon.svg"
+    },
+    {
         "title": "KDE Plasma",
         "slug": "kdeplasma",
         "hex": "1D99F3",
@@ -8988,10 +9078,22 @@
         "source": "keeweb.svg"
     },
     {
+        "title": "Kenmei",
+        "slug": "kenmei",
+        "hex": "545C64",
+        "source": "kenmei.svg"
+    },
+    {
         "title": "Kentico",
         "slug": "kentico",
         "hex": "F05A22",
         "source": "kentico.svg"
+    },
+    {
+        "title": "Keploy",
+        "slug": "keploy",
+        "hex": "FF914D",
+        "source": "keploy.svg"
     },
     {
         "title": "Keras",
@@ -9252,6 +9354,12 @@
         "source": "konva.svg"
     },
     {
+        "title": "KOReader",
+        "slug": "koreader",
+        "hex": "00A89C",
+        "source": "koreader.svg"
+    },
+    {
         "title": "Kotlin",
         "slug": "kotlin",
         "hex": "7F52FF",
@@ -9262,6 +9370,12 @@
         "slug": "koyeb",
         "hex": "121212",
         "source": "koyeb.svg"
+    },
+    {
+        "title": "Kred",
+        "slug": "kred",
+        "hex": "72BE50",
+        "source": "kred.svg"
     },
     {
         "title": "Krita",
@@ -9452,7 +9566,7 @@
     {
         "title": "Launchpad",
         "slug": "launchpad",
-        "hex": "F8C300",
+        "hex": "E95420",
         "source": "launchpad.svg"
     },
     {
@@ -9912,6 +10026,18 @@
         "source": "local.svg"
     },
     {
+        "title": "LocalSend",
+        "slug": "localsend",
+        "hex": "008080",
+        "source": "localsend.svg"
+    },
+    {
+        "title": "LocalXpose",
+        "slug": "localxpose",
+        "hex": "6023C0",
+        "source": "localxpose.svg"
+    },
+    {
         "title": "Lodash",
         "slug": "lodash",
         "hex": "3492FF",
@@ -10008,6 +10134,12 @@
         "source": "lua.svg"
     },
     {
+        "title": "Luau",
+        "slug": "luau",
+        "hex": "00A2FF",
+        "source": "luau.svg"
+    },
+    {
         "title": "Lubuntu",
         "slug": "lubuntu",
         "hex": "0068C8",
@@ -10096,6 +10228,12 @@
         "slug": "macpaw",
         "hex": "000000",
         "source": "macpaw.svg"
+    },
+    {
+        "title": "MacPorts",
+        "slug": "macports",
+        "hex": "1E79E9",
+        "source": "macports.svg"
     },
     {
         "title": "Macy's",
@@ -10224,6 +10362,12 @@
         "source": "manageiq.svg"
     },
     {
+        "title": "MangaUpdates",
+        "slug": "mangaupdates",
+        "hex": "FF8C15",
+        "source": "mangaupdates.svg"
+    },
+    {
         "title": "Manjaro",
         "slug": "manjaro",
         "hex": "35BFA4",
@@ -10322,7 +10466,7 @@
     {
         "title": "Material Design",
         "slug": "materialdesign",
-        "hex": "757575",
+        "hex": "6750A4",
         "source": "materialdesign.svg"
     },
     {
@@ -10542,12 +10686,6 @@
         "source": "mercadopago.svg"
     },
     {
-        "title": "Mercedes",
-        "slug": "mercedes",
-        "hex": "242424",
-        "source": "mercedes.svg"
-    },
-    {
         "title": "Merck",
         "slug": "merck",
         "hex": "007A73",
@@ -10596,6 +10734,12 @@
         "source": "metafilter.svg"
     },
     {
+        "title": "MetaGer",
+        "slug": "metager",
+        "hex": "F47216",
+        "source": "metager.svg"
+    },
+    {
         "title": "Metasploit",
         "slug": "metasploit",
         "hex": "2596CD",
@@ -10636,6 +10780,12 @@
         "slug": "mewe",
         "hex": "17377F",
         "source": "mewe.svg"
+    },
+    {
+        "title": "Mezmo",
+        "slug": "mezmo",
+        "hex": "E9FF92",
+        "source": "mezmo.svg"
     },
     {
         "title": "MG",
@@ -10690,6 +10840,12 @@
         "slug": "migadu",
         "hex": "0043CE",
         "source": "migadu.svg"
+    },
+    {
+        "title": "Mihon",
+        "slug": "mihon",
+        "hex": "0058A0",
+        "source": "mihon.svg"
     },
     {
         "title": "miHoYo",
@@ -10776,6 +10932,12 @@
         "source": "misskey.svg"
     },
     {
+        "title": "Mistral AI",
+        "slug": "mistralai",
+        "hex": "FA520F",
+        "source": "mistralai.svg"
+    },
+    {
         "title": "Mitsubishi",
         "slug": "mitsubishi",
         "hex": "E60012",
@@ -10840,6 +11002,12 @@
         "slug": "modal",
         "hex": "7FEE64",
         "source": "modal.svg"
+    },
+    {
+        "title": "Model Context Protocol",
+        "slug": "modelcontextprotocol",
+        "hex": "000000",
+        "source": "modelcontextprotocol.svg"
     },
     {
         "title": "Modin",
@@ -11132,8 +11300,14 @@
     {
         "title": "MYOB",
         "slug": "myob",
-        "hex": "6100A5",
+        "hex": "7B14EF",
         "source": "myob.svg"
+    },
+    {
+        "title": "MyShows",
+        "slug": "myshows",
+        "hex": "CC0000",
+        "source": "myshows.svg"
     },
     {
         "title": "Myspace",
@@ -11192,7 +11366,7 @@
     {
         "title": "Nano",
         "slug": "nano",
-        "hex": "4A90E2",
+        "hex": "209CE9",
         "source": "nano.svg"
     },
     {
@@ -11286,6 +11460,12 @@
         "source": "nec.svg"
     },
     {
+        "title": "Nederlandse Spoorwegen",
+        "slug": "nederlandsespoorwegen",
+        "hex": "003082",
+        "source": "nederlandsespoorwegen.svg"
+    },
+    {
         "title": "Neo4j",
         "slug": "neo4j",
         "hex": "4581C3",
@@ -11352,6 +11532,12 @@
         "source": "netgear.svg"
     },
     {
+        "title": "Netim",
+        "slug": "netim",
+        "hex": "FE8427",
+        "source": "netim.svg"
+    },
+    {
         "title": "Netlify",
         "slug": "netlify",
         "hex": "00C7B7",
@@ -11406,6 +11592,12 @@
         "source": "newegg.svg"
     },
     {
+        "title": "NewPipe",
+        "slug": "newpipe",
+        "hex": "CD201F",
+        "source": "newpipe.svg"
+    },
+    {
         "title": "NEXON",
         "slug": "nexon",
         "hex": "000000",
@@ -11416,6 +11608,12 @@
         "slug": "nextdotjs",
         "hex": "000000",
         "source": "nextdotjs.svg"
+    },
+    {
+        "title": "nextbike",
+        "slug": "nextbike",
+        "hex": "0046D7",
+        "source": "nextbike.svg"
     },
     {
         "title": "NextBillion.ai",
@@ -11452,12 +11650,6 @@
         "slug": "nextra",
         "hex": "000000",
         "source": "nextra.svg"
-    },
-    {
-        "title": "NextUI",
-        "slug": "nextui",
-        "hex": "000000",
-        "source": "nextui.svg"
     },
     {
         "title": "Nexus Mods",
@@ -11508,6 +11700,12 @@
         "source": "nhl.svg"
     },
     {
+        "title": "Nhost",
+        "slug": "nhost",
+        "hex": "0052CD",
+        "source": "nhost.svg"
+    },
+    {
         "title": "NiceHash",
         "slug": "nicehash",
         "hex": "FBC342",
@@ -11550,6 +11748,12 @@
         "source": "nixos.svg"
     },
     {
+        "title": "Nobara Linux",
+        "slug": "nobaralinux",
+        "hex": "000000",
+        "source": "nobaralinux.svg"
+    },
+    {
         "title": "Node-RED",
         "slug": "nodered",
         "hex": "8F0000",
@@ -11560,6 +11764,12 @@
         "slug": "nodedotjs",
         "hex": "5FA04E",
         "source": "nodedotjs.svg"
+    },
+    {
+        "title": "NodeBB",
+        "slug": "nodebb",
+        "hex": "1E5EBC",
+        "source": "nodebb.svg"
     },
     {
         "title": "Nodemon",
@@ -11614,6 +11824,18 @@
         "slug": "norwegian",
         "hex": "D81939",
         "source": "norwegian.svg"
+    },
+    {
+        "title": "Note",
+        "slug": "note",
+        "hex": "000000",
+        "source": "note.svg"
+    },
+    {
+        "title": "NotebookLM",
+        "slug": "notebooklm",
+        "hex": "000000",
+        "source": "notebooklm.svg"
     },
     {
         "title": "Notepad++",
@@ -11928,6 +12150,12 @@
         "source": "oneplus.svg"
     },
     {
+        "title": "OneStream",
+        "slug": "onestream",
+        "hex": "000000",
+        "source": "onestream.svg"
+    },
+    {
         "title": "OnlyFans",
         "slug": "onlyfans",
         "hex": "00AFF0",
@@ -12028,6 +12256,12 @@
         "slug": "openbsd",
         "hex": "F2CA30",
         "source": "openbsd.svg"
+    },
+    {
+        "title": "OpenCritic",
+        "slug": "opencritic",
+        "hex": "FC3E04",
+        "source": "opencritic.svg"
     },
     {
         "title": "OpenCV",
@@ -12204,9 +12438,9 @@
         "source": "operagx.svg"
     },
     {
-        "title": "OPNSense",
+        "title": "OPNsense",
         "slug": "opnsense",
-        "hex": "D94F00",
+        "hex": "E44A20",
         "source": "opnsense.svg"
     },
     {
@@ -12354,6 +12588,12 @@
         "source": "owncloud.svg"
     },
     {
+        "title": "Oxc",
+        "slug": "oxc",
+        "hex": "FF915C",
+        "source": "oxc.svg"
+    },
+    {
         "title": "Oxygen",
         "slug": "oxygen",
         "hex": "3A209E",
@@ -12406,6 +12646,12 @@
         "slug": "paddypower",
         "hex": "004833",
         "source": "paddypower.svg"
+    },
+    {
+        "title": "Padlet",
+        "slug": "padlet",
+        "hex": "FF4081",
+        "source": "padlet.svg"
     },
     {
         "title": "Pagekit",
@@ -12540,6 +12786,12 @@
         "source": "patreon.svg"
     },
     {
+        "title": "PAYBACK",
+        "slug": "payback",
+        "hex": "003EB0",
+        "source": "payback.svg"
+    },
+    {
         "title": "Paychex",
         "slug": "paychex",
         "hex": "004B8D",
@@ -12566,8 +12818,14 @@
     {
         "title": "PayPal",
         "slug": "paypal",
-        "hex": "003087",
+        "hex": "002991",
         "source": "paypal.svg"
+    },
+    {
+        "title": "Paysafe",
+        "slug": "paysafe",
+        "hex": "5A28FF",
+        "source": "paysafe.svg"
     },
     {
         "title": "Paytm",
@@ -12656,7 +12914,7 @@
     {
         "title": "Perforce",
         "slug": "perforce",
-        "hex": "404040",
+        "hex": "4C00FF",
         "source": "perforce.svg"
     },
     {
@@ -12926,7 +13184,7 @@
     {
         "title": "Pixabay",
         "slug": "pixabay",
-        "hex": "2EC66D",
+        "hex": "191B26",
         "source": "pixabay.svg"
     },
     {
@@ -13076,7 +13334,7 @@
     {
         "title": "Plotly",
         "slug": "plotly",
-        "hex": "3F4F75",
+        "hex": "7A76FF",
         "source": "plotly.svg"
     },
     {
@@ -13096,12 +13354,6 @@
         "slug": "plurk",
         "hex": "FF574D",
         "source": "plurk.svg"
-    },
-    {
-        "title": "Plus Codes",
-        "slug": "pluscodes",
-        "hex": "4285F4",
-        "source": "pluscodes.svg"
     },
     {
         "title": "PM2",
@@ -13164,15 +13416,9 @@
         "source": "poetry.svg"
     },
     {
-        "title": "Pointy",
-        "slug": "pointy",
-        "hex": "009DE0",
-        "source": "pointy.svg"
-    },
-    {
         "title": "Polars",
         "slug": "polars",
-        "hex": "CD792C",
+        "hex": "0075FF",
         "source": "polars.svg"
     },
     {
@@ -13320,6 +13566,12 @@
         "source": "prefect.svg"
     },
     {
+        "title": "PreMiD",
+        "slug": "premid",
+        "hex": "7289DA",
+        "source": "premid.svg"
+    },
+    {
         "title": "Premier League",
         "slug": "premierleague",
         "hex": "360D3A",
@@ -13366,18 +13618,6 @@
         "slug": "prezi",
         "hex": "3181FF",
         "source": "prezi.svg"
-    },
-    {
-        "title": "Prime",
-        "slug": "prime",
-        "hex": "00A8E1",
-        "source": "prime.svg"
-    },
-    {
-        "title": "Prime Video",
-        "slug": "primevideo",
-        "hex": "1F2E3E",
-        "source": "primevideo.svg"
     },
     {
         "title": "PrimeFaces",
@@ -13450,6 +13690,12 @@
         "slug": "processingfoundation",
         "hex": "006699",
         "source": "processingfoundation.svg"
+    },
+    {
+        "title": "ProcessOn",
+        "slug": "processon",
+        "hex": "067BEF",
+        "source": "processon.svg"
     },
     {
         "title": "ProcessWire",
@@ -13806,6 +14052,12 @@
         "source": "qnap.svg"
     },
     {
+        "title": "Qodo",
+        "slug": "qodo",
+        "hex": "7968FA",
+        "source": "qodo.svg"
+    },
+    {
         "title": "QQ",
         "slug": "qq",
         "hex": "1EBAFC",
@@ -13816,6 +14068,12 @@
         "slug": "qt",
         "hex": "41CD52",
         "source": "qt.svg"
+    },
+    {
+        "title": "Quad9",
+        "slug": "quad9",
+        "hex": "DC205E",
+        "source": "quad9.svg"
     },
     {
         "title": "Qualcomm",
@@ -13986,6 +14244,12 @@
         "source": "radarr.svg"
     },
     {
+        "title": "Radio France",
+        "slug": "radiofrance",
+        "hex": "2B00E7",
+        "source": "radiofrance.svg"
+    },
+    {
         "title": "Radix UI",
         "slug": "radixui",
         "hex": "161618",
@@ -14004,10 +14268,22 @@
         "source": "rainmeter.svg"
     },
     {
+        "title": "RainYun",
+        "slug": "rainyun",
+        "hex": "DAD9D9",
+        "source": "rainyun.svg"
+    },
+    {
         "title": "Rakuten",
         "slug": "rakuten",
         "hex": "BF0000",
         "source": "rakuten.svg"
+    },
+    {
+        "title": "Rakuten Kobo",
+        "slug": "rakutenkobo",
+        "hex": "BF0000",
+        "source": "rakutenkobo.svg"
     },
     {
         "title": "Ram",
@@ -14044,6 +14320,12 @@
         "slug": "raspberrypi",
         "hex": "A22846",
         "source": "raspberrypi.svg"
+    },
+    {
+        "title": "Ratatui",
+        "slug": "ratatui",
+        "hex": "000000",
+        "source": "ratatui.svg"
     },
     {
         "title": "Ravelry",
@@ -14442,6 +14724,12 @@
         "source": "revealdotjs.svg"
     },
     {
+        "title": "RevenueCat",
+        "slug": "revenuecat",
+        "hex": "F2545B",
+        "source": "revenuecat.svg"
+    },
+    {
         "title": "ReverbNation",
         "slug": "reverbnation",
         "hex": "E43526",
@@ -14632,6 +14920,18 @@
         "slug": "roll20",
         "hex": "E10085",
         "source": "roll20.svg"
+    },
+    {
+        "title": "Rollbar",
+        "slug": "rollbar",
+        "hex": "3569F3",
+        "source": "rollbar.svg"
+    },
+    {
+        "title": "Rolldown",
+        "slug": "rolldown",
+        "hex": "FF7E17",
+        "source": "rolldown.svg"
     },
     {
         "title": "Rolls-Royce",
@@ -14952,12 +15252,6 @@
         "source": "sanfranciscomunicipalrailway.svg"
     },
     {
-        "title": "SanDisk",
-        "slug": "sandisk",
-        "hex": "ED1C24",
-        "source": "sandisk.svg"
-    },
-    {
         "title": "Sanic",
         "slug": "sanic",
         "hex": "FF0D68",
@@ -15144,6 +15438,12 @@
         "source": "scylladb.svg"
     },
     {
+        "title": "Seafile",
+        "slug": "seafile",
+        "hex": "FF9800",
+        "source": "seafile.svg"
+    },
+    {
         "title": "Seagate",
         "slug": "seagate",
         "hex": "6EBE49",
@@ -15286,6 +15586,12 @@
         "slug": "sequelize",
         "hex": "52B0E7",
         "source": "sequelize.svg"
+    },
+    {
+        "title": "ServBay",
+        "slug": "servbay",
+        "hex": "00103C",
+        "source": "servbay.svg"
     },
     {
         "title": "Server Fault",
@@ -15498,6 +15804,12 @@
         "source": "simpleicons.svg"
     },
     {
+        "title": "SimpleLocalize",
+        "slug": "simplelocalize",
+        "hex": "222B33",
+        "source": "simplelocalize.svg"
+    },
+    {
         "title": "SimpleLogin",
         "slug": "simplelogin",
         "hex": "EA319F",
@@ -15680,7 +15992,7 @@
     {
         "title": "Snapcraft",
         "slug": "snapcraft",
-        "hex": "82BEA0",
+        "hex": "E95420",
         "source": "snapcraft.svg"
     },
     {
@@ -15798,22 +16110,22 @@
         "source": "sonar.svg"
     },
     {
-        "title": "SonarCloud",
-        "slug": "sonarcloud",
-        "hex": "F3702A",
-        "source": "sonarcloud.svg"
+        "title": "SonarQube Cloud",
+        "slug": "sonarqubecloud",
+        "hex": "126ED3",
+        "source": "sonarqubecloud.svg"
     },
     {
-        "title": "SonarLint",
-        "slug": "sonarlint",
-        "hex": "CB2029",
-        "source": "sonarlint.svg"
+        "title": "SonarQube for IDE",
+        "slug": "sonarqubeforide",
+        "hex": "126ED3",
+        "source": "sonarqubeforide.svg"
     },
     {
-        "title": "SonarQube",
-        "slug": "sonarqube",
-        "hex": "4E9BCD",
-        "source": "sonarqube.svg"
+        "title": "SonarQube Server",
+        "slug": "sonarqubeserver",
+        "hex": "126ED3",
+        "source": "sonarqubeserver.svg"
     },
     {
         "title": "sonarr",
@@ -16322,7 +16634,7 @@
     {
         "title": "Stellar",
         "slug": "stellar",
-        "hex": "7D00FF",
+        "hex": "FDDA24",
         "source": "stellar.svg"
     },
     {
@@ -16506,6 +16818,12 @@
         "source": "sui.svg"
     },
     {
+        "title": "Suitest",
+        "slug": "suitest",
+        "hex": "F06060",
+        "source": "suitest.svg"
+    },
+    {
         "title": "Sumo Logic",
         "slug": "sumologic",
         "hex": "000099",
@@ -16648,6 +16966,12 @@
         "slug": "swiper",
         "hex": "6332F6",
         "source": "swiper.svg"
+    },
+    {
+        "title": "Swisscows",
+        "slug": "swisscows",
+        "hex": "000000",
+        "source": "swisscows.svg"
     },
     {
         "title": "SWR",
@@ -16944,6 +17268,12 @@
         "source": "telegraph.svg"
     },
     {
+        "title": "Telenor",
+        "slug": "telenor",
+        "hex": "00C8FF",
+        "source": "telenor.svg"
+    },
+    {
         "title": "Temporal",
         "slug": "temporal",
         "hex": "000000",
@@ -17112,6 +17442,12 @@
         "source": "theodinproject.svg"
     },
     {
+        "title": "The Planetary Society",
+        "slug": "theplanetarysociety",
+        "hex": "000000",
+        "source": "theplanetarysociety.svg"
+    },
+    {
         "title": "The Register",
         "slug": "theregister",
         "hex": "FF0000",
@@ -17128,6 +17464,12 @@
         "slug": "thespritersresource",
         "hex": "BE3939",
         "source": "thespritersresource.svg"
+    },
+    {
+        "title": "The StoryGraph",
+        "slug": "thestorygraph",
+        "hex": "000000",
+        "source": "thestorygraph.svg"
     },
     {
         "title": "The Washington Post",
@@ -17226,7 +17568,7 @@
         "source": "ticktick.svg"
     },
     {
-        "title": "Tidal",
+        "title": "TIDAL",
         "slug": "tidal",
         "hex": "000000",
         "source": "tidal.svg"
@@ -17350,6 +17692,12 @@
         "slug": "toggltrack",
         "hex": "E57CD8",
         "source": "toggltrack.svg"
+    },
+    {
+        "title": "Tokio",
+        "slug": "tokio",
+        "hex": "000000",
+        "source": "tokio.svg"
     },
     {
         "title": "Tokyo Metro",
@@ -17556,6 +17904,12 @@
         "source": "trendmicro.svg"
     },
     {
+        "title": "Tresorit",
+        "slug": "tresorit",
+        "hex": "00A9E2",
+        "source": "tresorit.svg"
+    },
+    {
         "title": "Treyarch",
         "slug": "treyarch",
         "hex": "000000",
@@ -17714,7 +18068,7 @@
     {
         "title": "Turborepo",
         "slug": "turborepo",
-        "hex": "EF4444",
+        "hex": "FF1E56",
         "source": "turborepo.svg"
     },
     {
@@ -17742,6 +18096,12 @@
         "source": "tuta.svg"
     },
     {
+        "title": "TUXEDO Computers",
+        "slug": "tuxedocomputers",
+        "hex": "000000",
+        "source": "tuxedocomputers.svg"
+    },
+    {
         "title": "TV Time",
         "slug": "tvtime",
         "hex": "FFD400",
@@ -17752,6 +18112,12 @@
         "slug": "tv4play",
         "hex": "E0001C",
         "source": "tv4play.svg"
+    },
+    {
+        "title": "Twenty",
+        "slug": "twenty",
+        "hex": "000000",
+        "source": "twenty.svg"
     },
     {
         "title": "Twilio",
@@ -18096,6 +18462,12 @@
         "source": "upwork.svg"
     },
     {
+        "title": "UserVoice",
+        "slug": "uservoice",
+        "hex": "FF6720",
+        "source": "uservoice.svg"
+    },
+    {
         "title": "USPS",
         "slug": "usps",
         "hex": "333366",
@@ -18166,6 +18538,12 @@
         "slug": "valve",
         "hex": "F74843",
         "source": "valve.svg"
+    },
+    {
+        "title": "Vanilla Extract",
+        "slug": "vanillaextract",
+        "hex": "F786AD",
+        "source": "vanillaextract.svg"
     },
     {
         "title": "Vapor",
@@ -18354,6 +18732,12 @@
         "source": "victronenergy.svg"
     },
     {
+        "title": "Vikunja",
+        "slug": "vikunja",
+        "hex": "196AFF",
+        "source": "vikunja.svg"
+    },
+    {
         "title": "Vim",
         "slug": "vim",
         "hex": "019733",
@@ -18412,6 +18796,12 @@
         "slug": "visa",
         "hex": "1A1F71",
         "source": "visa.svg"
+    },
+    {
+        "title": "Visual Paradigm",
+        "slug": "visualparadigm",
+        "hex": "CC3333",
+        "source": "visualparadigm.svg"
     },
     {
         "title": "visx",
@@ -18498,6 +18888,12 @@
         "source": "vodafone.svg"
     },
     {
+        "title": "voelkner",
+        "slug": "voelkner",
+        "hex": "94C125",
+        "source": "voelkner.svg"
+    },
+    {
         "title": "Void Linux",
         "slug": "voidlinux",
         "hex": "478061",
@@ -18580,6 +18976,12 @@
         "slug": "vuetify",
         "hex": "1867C0",
         "source": "vuetify.svg"
+    },
+    {
+        "title": "VueUse",
+        "slug": "vueuse",
+        "hex": "41B883",
+        "source": "vueuse.svg"
     },
     {
         "title": "Vulkan",
@@ -18894,6 +19296,12 @@
         "source": "wemo.svg"
     },
     {
+        "title": "WeRead",
+        "slug": "weread",
+        "hex": "37A7FF",
+        "source": "weread.svg"
+    },
+    {
         "title": "Western Digital",
         "slug": "westerndigital",
         "hex": "995DFF",
@@ -18922,6 +19330,12 @@
         "slug": "wgpu",
         "hex": "40E0D0",
         "source": "wgpu.svg"
+    },
+    {
+        "title": "what3words",
+        "slug": "what3words",
+        "hex": "E11F26",
+        "source": "what3words.svg"
     },
     {
         "title": "WhatsApp",
@@ -18984,6 +19398,12 @@
         "source": "wikiquote.svg"
     },
     {
+        "title": "Wikisource",
+        "slug": "wikisource",
+        "hex": "006699",
+        "source": "wikisource.svg"
+    },
+    {
         "title": "Wikiversity",
         "slug": "wikiversity",
         "hex": "00649A",
@@ -19000,6 +19420,12 @@
         "slug": "winamp",
         "hex": "F93821",
         "source": "winamp.svg"
+    },
+    {
+        "title": "Windsurf",
+        "slug": "windsurf",
+        "hex": "0B100F",
+        "source": "windsurf.svg"
     },
     {
         "title": "Wine",
@@ -19294,6 +19720,12 @@
         "slug": "ycombinator",
         "hex": "F0652F",
         "source": "ycombinator.svg"
+    },
+    {
+        "title": "Yaak",
+        "slug": "yaak",
+        "hex": "814EDF",
+        "source": "yaak.svg"
     },
     {
         "title": "yabai",
@@ -19634,7 +20066,7 @@
     {
         "title": "Zod",
         "slug": "zod",
-        "hex": "3E67B1",
+        "hex": "408AFF",
         "source": "zod.svg"
     },
     {
@@ -19648,6 +20080,12 @@
         "slug": "zoiper",
         "hex": "F47920",
         "source": "zoiper.svg"
+    },
+    {
+        "title": "Zola",
+        "slug": "zola",
+        "hex": "EAE7D6",
+        "source": "zola.svg"
     },
     {
         "title": "Zomato",

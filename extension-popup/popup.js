@@ -1,18 +1,60 @@
 document.addEventListener("DOMContentLoaded", () => {
-	const checkbox = document.getElementById("dynamicBackgroundCheckbox");
+    const checkbox = document.getElementById("dynamicBackgroundCheckbox");
+    const customColorInput = document.getElementById("customColorInput");
+    const colorPreview = document.getElementById("colorPreview");
+    const exportBtn = document.getElementById("exportBtn");
+    const importBtn = document.getElementById("importBtn");
+    const importFile = document.getElementById("importFile");
 
-	const loadBackgroundState = () => {
-		let dynamicBackgroundState = localStorage.getItem("dynamicbackground");
+    const isValidHexColor = (hex) => /^#[A-Fa-f0-9]{6}$/.test(hex);
 
-		checkbox.checked = dynamicBackgroundState === "true";
-	};
+    const updateInputState = () => {
+        customColorInput.toggleAttribute("disabled", checkbox.checked);
+    };
 
-	checkbox.addEventListener("change", () => {
-		localStorage.setItem("dynamicbackground", checkbox.checked);
-		chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-			chrome.tabs.reload(tabs[0].id);
-		});
-	});
+    const loadState = () => {
+        const dynamicBackgroundState =
+            localStorage.getItem("dynamicBackground") ?? "true";
+        localStorage.setItem("dynamicBackground", dynamicBackgroundState);
 
-	loadBackgroundState();
+        let customColor = localStorage.getItem("customBackgroundColor");
+        if (!isValidHexColor(customColor)) {
+            customColor = "#313039";
+            localStorage.setItem("customBackgroundColor", customColor);
+        }
+
+        checkbox.checked = dynamicBackgroundState === "true";
+        customColorInput.value = customColor;
+        colorPreview.style.backgroundColor = customColor;
+        updateInputState();
+    };
+
+    checkbox.addEventListener("change", () => {
+        localStorage.setItem(
+            "dynamicBackground",
+            checkbox.checked ? "true" : "false",
+        );
+        updateInputState();
+    });
+
+    customColorInput.addEventListener("input", () => {
+        const color = customColorInput.value.trim();
+        if (color === "" || isValidHexColor(color)) {
+            customColorInput.style.borderColor = "var(--button-hover)";
+            localStorage.setItem("customBackgroundColor", color);
+            colorPreview.style.backgroundColor = isValidHexColor(color)
+                ? color
+                : "transparent";
+        } else {
+            customColorInput.style.borderColor = "#e74c3c";
+        }
+    });
+
+    exportBtn?.addEventListener("click", exportConfig);
+    importBtn?.addEventListener("click", () => importFile.click());
+    importFile?.addEventListener("change", (e) => {
+        if (e.target.files.length) importConfig(e.target.files[0]);
+    });
+
+    loadState();
 });
