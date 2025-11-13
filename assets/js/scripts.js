@@ -139,6 +139,10 @@ class TodoList {
             } else if (e.key === "Escape") {
                 e.preventDefault();
                 cancel();
+            } else if (e.key === "Delete") {
+                e.preventDefault();
+                this.deleteTodo(todo.id);
+                this.editing = null;
             }
         });
         input.addEventListener("blur", save);
@@ -176,11 +180,15 @@ class TodoList {
             const li = document.createElement("li");
             li.className = todo.completed ? "completed" : "";
             li.style.display = "flex";
-            li.style.alignItems = "center";
+            li.style.alignItems = "flex-start";
 
             const span = document.createElement("span");
             span.textContent = todo.text;
             span.style.marginRight = "auto";
+            span.style.wordWrap = "break-word";
+            span.style.overflowWrap = "break-word";
+            span.style.flex = "1";
+            span.style.minWidth = "0";
             li.appendChild(span);
 
             const arrows = document.createElement("div");
@@ -189,6 +197,7 @@ class TodoList {
             arrows.style.justifyContent = "center";
             arrows.style.gap = "0px";
             arrows.style.height = "auto";
+            arrows.style.marginLeft = "calc(var(--spacing) * 0.3)";
 
             const createArrow = (symbol, disabled) => {
                 const btn = document.createElement("button");

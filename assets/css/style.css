@@ -270,7 +270,6 @@ section:nth-child(2) li span {
     color: var(--color-300);
     font-size: var(--font-size-small);
     line-height: 1.4;
-    word-break: break-all;
 }
 
 section:nth-child(2) li.completed span {
