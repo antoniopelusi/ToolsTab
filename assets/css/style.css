@@ -1,7 +1,7 @@
 /* Font Face Definitions */
 @font-face {
     font-family: "Ubuntu local";
-    src: url("/assets/fonts/Ubuntu-Regular.ttf") format("truetype");
+    src: url("../fonts/Ubuntu-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: "Ubuntu local";
-    src: url("/assets/fonts/Ubuntu-Bold.ttf") format("truetype");
+    src: url("../fonts/Ubuntu-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -17,7 +17,7 @@
 
 @font-face {
     font-family: "Ubuntu Mono local";
-    src: url("/assets/fonts/UbuntuMono-Regular.ttf") format("truetype");
+    src: url("../fonts/UbuntuMono-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -56,7 +56,7 @@ html {
 }
 
 body {
-    height: 100vh;
+    height: 100dvh;
     font-family:
         "Ubuntu local",
         -apple-system,
@@ -76,7 +76,7 @@ body {
 }
 
 main {
-    height: 100vh;
+    height: 100dvh;
     padding: var(--spacing);
     display: grid;
     grid-template-rows: 2fr 3fr;
