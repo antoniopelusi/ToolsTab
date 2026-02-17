@@ -50,6 +50,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    const timeFormatCheckbox = document.getElementById("timeFormatCheckbox");
+    timeFormatCheckbox.checked = localStorage.getItem("use24h") === "true";
+    timeFormatCheckbox.addEventListener("change", () => {
+        localStorage.setItem(
+            "use24h",
+            timeFormatCheckbox.checked ? "true" : "false",
+        );
+    });
+
     exportBtn?.addEventListener("click", exportConfig);
     importBtn?.addEventListener("click", () => importFile.click());
     importFile?.addEventListener("change", (e) => {

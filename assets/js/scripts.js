@@ -41,10 +41,19 @@ class DateTime {
         const year = now.getFullYear();
         const dayName = this.days[now.getDay()];
 
+        const use24h = localStorage.getItem("use24h") === "true";
+
         let hours = now.getHours();
         const minutes = now.getMinutes().toString().padStart(2, "0");
-        const ampm = hours >= 12 ? "PM" : "AM";
-        hours = hours % 12 || 12;
+
+        let timeString;
+        if (use24h) {
+            timeString = `${hours.toString().padStart(2, "0")}:${minutes}`;
+        } else {
+            const ampm = hours >= 12 ? "PM" : "AM";
+            hours = hours % 12 || 12;
+            timeString = `${hours}:${minutes} ${ampm}`;
+        }
 
         const dateEl = document.getElementById("date-display");
         const dayEl = document.getElementById("day-display");
@@ -52,7 +61,7 @@ class DateTime {
 
         if (dateEl) dateEl.textContent = `${day} ${month} ${year}`;
         if (dayEl) dayEl.textContent = dayName;
-        if (timeEl) timeEl.textContent = `${hours}:${minutes} ${ampm}`;
+        if (timeEl) timeEl.textContent = timeString;
     }
 
     init() {

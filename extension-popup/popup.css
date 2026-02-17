@@ -67,7 +67,8 @@ button:hover {
     background-color: var(--button-hover);
 }
 
-#dynamicBackgroundCheckbox {
+#dynamicBackgroundCheckbox,
+#timeFormatCheckbox {
     appearance: none;
     background-color: #dfe1e4;
     border-radius: 72px;
@@ -108,7 +109,8 @@ input[type="text"]::placeholder {
     opacity: 0.6;
 }
 
-#dynamicBackgroundCheckbox::before {
+#dynamicBackgroundCheckbox::before,
+#timeFormatCheckbox::before {
     bottom: -6px;
     content: "";
     left: -6px;
@@ -118,11 +120,14 @@ input[type="text"]::placeholder {
 }
 
 #dynamicBackgroundCheckbox,
-#dynamicBackgroundCheckbox::after {
+#dynamicBackgroundCheckbox::after,
+#timeFormatCheckbox,
+#timeFormatCheckbox::after {
     transition: all 100ms ease-out;
 }
 
-#dynamicBackgroundCheckbox::after {
+#dynamicBackgroundCheckbox::after,
+#timeFormatCheckbox::after {
     background-color: #fff;
     border-radius: 50%;
     content: "";
@@ -133,20 +138,24 @@ input[type="text"]::placeholder {
     width: 14px;
 }
 
-#dynamicBackgroundCheckbox:hover {
+#dynamicBackgroundCheckbox:hover,
+#timeFormatCheckbox:hover {
     background-color: #c9cbcd;
     transition-duration: 0s;
 }
 
-#dynamicBackgroundCheckbox:checked {
+#dynamicBackgroundCheckbox:checked,
+#timeFormatCheckbox:checked {
     background-color: #7790e1;
 }
 
-#dynamicBackgroundCheckbox:checked:hover {
+#dynamicBackgroundCheckbox:checked:hover,
+#timeFormatCheckbox:checked:hover {
     background-color: #5a78db;
 }
 
-#dynamicBackgroundCheckbox:checked::after {
+#dynamicBackgroundCheckbox:checked::after,
+#timeFormatCheckbox:checked::after {
     background-color: #fff;
     left: 13px;
 }
