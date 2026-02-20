@@ -373,7 +373,7 @@ class Bookmarks {
     }
 
     loadIcons() {
-        fetch("assets/icons/icons.json")
+        fetch("./assets/icons/icons.json")
             .then((response) => response.json())
             .then((data) => {
                 this.iconsMap = {};
@@ -418,8 +418,8 @@ class Bookmarks {
             this.getBookmarkIcon(bookmark.name) ||
             this.getBookmarkIcon(bookmark.slug);
         const iconSrc = iconData
-            ? `assets/icons/simpleicons/${iconData.source}`
-            : "assets/icons/default.svg";
+            ? `./assets/icons/simpleicons/${iconData.source}`
+            : "./assets/icons/default.svg";
         const iconColor = iconData ? `#${iconData.hex}` : "var(--color-300)";
 
         button.innerHTML = "";
@@ -444,7 +444,7 @@ class Bookmarks {
                     iconContainer.appendChild(svg);
                 } else {
                     const fallbackImg = document.createElement("img");
-                    fallbackImg.src = "assets/icons/default.svg";
+                    fallbackImg.src = "./assets/icons/default.svg";
                     fallbackImg.alt = "icon";
                     fallbackImg.style.display = "block";
                     fallbackImg.style.margin = "0 auto";

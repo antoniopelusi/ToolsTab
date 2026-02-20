@@ -1,4 +1,3 @@
-/* Font Face Definitions */
 @font-face {
     font-family: "Ubuntu local";
     src: url("../fonts/Ubuntu-Regular.ttf") format("truetype");
@@ -30,7 +29,6 @@
     --spacing: clamp(0.5rem, 4vmin, 2rem);
     --border-radius: clamp(0.75rem, 2vmin, 1.25rem);
 
-    /* Color Scale */
     --color-background: #313039;
     --color-tile: #00000070;
     --color-tile-hover: #00000075;
@@ -177,17 +175,14 @@ section:nth-child(1) div[id="day-display"] {
     font-weight: 400;
 }
 
-/* Global monospace for all section content */
 section * {
     font-family: "Ubuntu Mono local", monospace;
 }
 
-/* Override for h2 headers */
 section h2 {
     font-family: "Ubuntu local", sans-serif;
 }
 
-/* Override for first tile */
 section:nth-child(1) * {
     font-family: "Ubuntu local", sans-serif;
 }
@@ -347,10 +342,10 @@ section:nth-child(3) > div > a {
 }
 
 section:nth-child(3) > div > a {
-    display: block; /* necessario per far funzionare l'ellipsis */
-    width: 100%; /* il testo prenderà tutta la larghezza disponibile */
-    overflow: hidden; /* nasconde il contenuto eccedente */
-    text-align: center; /* centra il testo */
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
     text-decoration: none;
 }
 
