@@ -1,3 +1,13 @@
+// ─── Utility ────────────────────────────────────────────────────────
+function debounce(fn, delay) {
+    let timer;
+    return function (...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => fn.apply(this, args), delay);
+    };
+}
+
+// ─── Storage ──────────────────────────────────────────────────────────────────
 const Storage = {
     save: (key, data) => localStorage.setItem(key, JSON.stringify(data)),
     load: (key, fallback = null) => {
@@ -9,6 +19,7 @@ const Storage = {
     },
 };
 
+// ─── DateTime ─────────────────────────────────────────────────────────────────
 class DateTime {
     months = [
         "January",
@@ -34,6 +45,10 @@ class DateTime {
         "Saturday",
     ];
 
+    constructor() {
+        this.use24h = localStorage.getItem("use24h") === "true";
+    }
+
     updateDateTime() {
         const now = new Date();
         const day = now.getDate();
@@ -41,13 +56,11 @@ class DateTime {
         const year = now.getFullYear();
         const dayName = this.days[now.getDay()];
 
-        const use24h = localStorage.getItem("use24h") === "true";
-
         let hours = now.getHours();
         const minutes = now.getMinutes().toString().padStart(2, "0");
 
         let timeString;
-        if (use24h) {
+        if (this.use24h) {
             timeString = `${hours.toString().padStart(2, "0")}:${minutes}`;
         } else {
             const ampm = hours >= 12 ? "PM" : "AM";
@@ -67,9 +80,16 @@ class DateTime {
     init() {
         this.updateDateTime();
         setInterval(() => this.updateDateTime(), 1000);
+
+        window.addEventListener("storage", (e) => {
+            if (e.key === "use24h") {
+                this.use24h = e.newValue === "true";
+            }
+        });
     }
 }
 
+// ─── TodoList ─────────────────────────────────────────────────────────────────
 class TodoList {
     constructor() {
         this.todos = Storage.load("todolist", []);
@@ -266,6 +286,7 @@ class TodoList {
 
     init() {
         this.render();
+
         this.input.addEventListener("keydown", (e) => {
             if (e.key === "Enter") {
                 e.preventDefault();
@@ -273,6 +294,7 @@ class TodoList {
                 this.input.value = "";
             }
         });
+
         this.clearBtn.addEventListener("click", () => {
             this.todos = this.todos.filter((t) => !t.completed);
             this.save();
@@ -288,6 +310,7 @@ class TodoList {
     }
 }
 
+// ─── Clipboard ────────────────────────────────────────────────────────────────
 class Clipboard {
     constructor() {
         this.slots = Storage.load("clipboard", ["", "", "", "", ""]);
@@ -315,10 +338,7 @@ class Clipboard {
             if (!slot) continue;
 
             slot.value = this.slots[i];
-
-            if (this.slots[i].trim()) {
-                slot.classList.add("has-content");
-            }
+            if (this.slots[i].trim()) slot.classList.add("has-content");
 
             slot.addEventListener("click", (e) => {
                 if (e.ctrlKey || e.metaKey) {
@@ -333,17 +353,22 @@ class Clipboard {
                 }
             });
 
+            const debouncedSave = debounce(() => this.save(), 300);
+
             slot.addEventListener("input", () => {
                 this.slots[i] = slot.value;
-                this.save();
 
                 if (slot.value.trim()) {
                     slot.classList.add("has-content");
                 } else {
                     slot.classList.remove("has-content");
                 }
+
+                debouncedSave();
             });
         }
+
+        window.addEventListener("beforeunload", () => this.save());
 
         window.addEventListener("storage", (e) => {
             if (e.key === "clipboard") {
@@ -362,6 +387,7 @@ class Clipboard {
     }
 }
 
+// ─── Bookmarks ────────────────────────────────────────────────────────────────
 class Bookmarks {
     constructor() {
         this.bookmarks = Storage.load("bookmarks", []);
@@ -388,8 +414,7 @@ class Bookmarks {
 
     getBookmarkIcon(nameOrSlug) {
         if (!this.iconsLoaded || !this.iconsMap || !nameOrSlug) return null;
-        const key = nameOrSlug.toLowerCase().trim();
-        return this.iconsMap[key] || null;
+        return this.iconsMap[nameOrSlug.toLowerCase().trim()] || null;
     }
 
     createEmptyButton() {
@@ -489,9 +514,7 @@ class Bookmarks {
         this.editingButton = button;
 
         const newButton = button.cloneNode(false);
-        if (newButton.href) {
-            newButton.removeAttribute("href");
-        }
+        if (newButton.href) newButton.removeAttribute("href");
         button.parentNode.replaceChild(newButton, button);
         this.editingButton = newButton;
 
@@ -531,16 +554,13 @@ class Bookmarks {
 
         editDiv.appendChild(nameInput);
         editDiv.appendChild(urlInput);
-
         newButton.innerHTML = "";
         newButton.appendChild(editDiv);
-
         nameInput.focus();
 
         const saveEdit = () => {
             const name = nameInput.value.trim();
             const url = urlInput.value.trim();
-
             if (name && url) {
                 if (bookmark) {
                     bookmark.name = name;
@@ -559,14 +579,12 @@ class Bookmarks {
         const cancelEdit = () => {
             if (!this.editingButton) return;
             const btn = this.editingButton;
-
             if (btn && btn.dataset.bookmarkIndex !== undefined && bookmark) {
                 const index = parseInt(btn.dataset.bookmarkIndex, 10);
                 const restored = this.createFilledButton(bookmark, index);
                 btn.parentNode.replaceChild(restored, btn);
             } else {
-                const restored = this.createEmptyButton();
-                btn.parentNode.replaceChild(restored, btn);
+                btn.parentNode.replaceChild(this.createEmptyButton(), btn);
             }
             this.editingButton = null;
         };
@@ -596,7 +614,6 @@ class Bookmarks {
 
         nameInput.addEventListener("keydown", handleKeydown);
         urlInput.addEventListener("keydown", handleKeydown);
-
         nameInput.addEventListener("click", (e) => e.stopPropagation());
         urlInput.addEventListener("click", (e) => e.stopPropagation());
         nameInput.addEventListener("mousedown", (e) => e.stopPropagation());
@@ -606,12 +623,9 @@ class Bookmarks {
         const handleBlur = () => {
             clearTimeout(blurTimeout);
             blurTimeout = setTimeout(() => {
-                if (!editDiv.contains(document.activeElement)) {
-                    saveEdit();
-                }
+                if (!editDiv.contains(document.activeElement)) saveEdit();
             }, 100);
         };
-
         nameInput.addEventListener("blur", handleBlur);
         urlInput.addEventListener("blur", handleBlur);
     }
@@ -620,17 +634,13 @@ class Bookmarks {
         if (!this.editingButton) return;
         const btn = this.editingButton;
         const parent = btn.parentNode;
-
         if (btn.dataset.bookmarkIndex !== undefined) {
             const index = parseInt(btn.dataset.bookmarkIndex, 10);
             const bookmark = this.bookmarks[index];
-            const restored = this.createFilledButton(bookmark, index);
-            parent.replaceChild(restored, btn);
+            parent.replaceChild(this.createFilledButton(bookmark, index), btn);
         } else {
-            const restored = this.createEmptyButton();
-            parent.replaceChild(restored, btn);
+            parent.replaceChild(this.createEmptyButton(), btn);
         }
-
         this.editingButton = null;
     }
 
@@ -642,22 +652,18 @@ class Bookmarks {
         this.grid.innerHTML = "";
         this.editingButton = null;
 
-        const sortedBookmarks = [...this.bookmarks].sort((a, b) =>
-            a.name.localeCompare(b.name),
-        );
-
-        sortedBookmarks.forEach((bookmark, index) => {
-            this.grid.appendChild(this.createFilledButton(bookmark, index));
-        });
+        [...this.bookmarks]
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .forEach((bookmark, index) => {
+                this.grid.appendChild(this.createFilledButton(bookmark, index));
+            });
 
         this.grid.appendChild(this.createEmptyButton());
     }
 
     init() {
         if (!this.grid) return;
-        if (this.iconsLoaded) {
-            this.render();
-        }
+        if (this.iconsLoaded) this.render();
 
         window.addEventListener("storage", (e) => {
             if (e.key === "bookmarks") {
@@ -668,6 +674,7 @@ class Bookmarks {
     }
 }
 
+// ─── Notepad ──────────────────────────────────────────────────────────────────
 class Notepad {
     constructor() {
         this.content = JSON.parse(localStorage.getItem("notepad") || '""');
@@ -686,7 +693,10 @@ class Notepad {
 
         this.textarea.value = this.content;
 
-        this.textarea.addEventListener("input", () => this.save());
+        const debouncedSave = debounce(() => this.save(), 300);
+        this.textarea.addEventListener("input", debouncedSave);
+
+        window.addEventListener("beforeunload", () => this.save());
 
         window.addEventListener("storage", (e) => {
             if (e.key === "notepad") {
@@ -699,32 +709,20 @@ class Notepad {
     }
 }
 
+// ─── Storage initialisation ───────────────────────────────────────────────────
 function initializeStorage() {
-    if (!localStorage.getItem("dynamicBackground")) {
+    if (!localStorage.getItem("dynamicBackground"))
         Storage.save("dynamicBackground", true);
-    }
-
-    if (!localStorage.getItem("customBackgroundColor")) {
+    if (!localStorage.getItem("customBackgroundColor"))
         Storage.save("customBackgroundColor", "");
-    }
-
-    if (!localStorage.getItem("todolist")) {
-        Storage.save("todolist", []);
-    }
-
-    if (!localStorage.getItem("bookmarks")) {
-        Storage.save("bookmarks", []);
-    }
-
-    if (!localStorage.getItem("clipboard")) {
+    if (!localStorage.getItem("todolist")) Storage.save("todolist", []);
+    if (!localStorage.getItem("bookmarks")) Storage.save("bookmarks", []);
+    if (!localStorage.getItem("clipboard"))
         Storage.save("clipboard", ["", "", "", "", ""]);
-    }
-
-    if (!localStorage.getItem("notepad")) {
-        Storage.save("notepad", "");
-    }
+    if (!localStorage.getItem("notepad")) Storage.save("notepad", "");
 }
 
+// ─── Import / Export ──────────────────────────────────────────────────────────
 class ImportExport {
     static exportConfig() {
         const config = {};
@@ -733,10 +731,10 @@ class ImportExport {
             config[key] = localStorage.getItem(key);
         }
 
-        const dataStr = JSON.stringify(config, null, 2);
-        const blob = new Blob([dataStr], { type: "application/json" });
+        const blob = new Blob([JSON.stringify(config, null, 2)], {
+            type: "application/json",
+        });
         const url = URL.createObjectURL(blob);
-
         const a = document.createElement("a");
         a.href = url;
         a.download = "toolstab.config.json";
@@ -760,13 +758,10 @@ class ImportExport {
                 reader.onload = (event) => {
                     try {
                         const config = JSON.parse(event.target.result);
-
                         localStorage.clear();
-
                         for (const [key, value] of Object.entries(config)) {
                             localStorage.setItem(key, value);
                         }
-
                         location.reload();
                     } catch (error) {
                         alert(
@@ -787,28 +782,30 @@ class ImportExport {
 
     static init() {
         const firstSection = document.querySelector("section:nth-child(1)");
-        if (firstSection) {
-            firstSection.addEventListener("click", (e) => {
-                if (e.ctrlKey || e.metaKey) {
-                    e.preventDefault();
-                    ImportExport.exportConfig();
-                } else if (e.altKey) {
-                    e.preventDefault();
-                    ImportExport.importConfig();
-                }
-            });
+        if (!firstSection) return;
 
-            firstSection.addEventListener("mouseenter", (e) => {
-                firstSection.style.cursor = "pointer";
-            });
+        firstSection.addEventListener("click", (e) => {
+            if (e.ctrlKey || e.metaKey) {
+                e.preventDefault();
+                ImportExport.exportConfig();
+            } else if (e.altKey) {
+                e.preventDefault();
+                ImportExport.importConfig();
+            }
+        });
 
-            firstSection.addEventListener("mouseleave", (e) => {
-                firstSection.style.cursor = "default";
-            });
-        }
+        firstSection.addEventListener(
+            "mouseenter",
+            () => (firstSection.style.cursor = "pointer"),
+        );
+        firstSection.addEventListener(
+            "mouseleave",
+            () => (firstSection.style.cursor = "default"),
+        );
     }
 }
 
+// ─── Bootstrap ────────────────────────────────────────────────────────────────
 function main() {
     initializeStorage();
     new DynamicBackground().init();
@@ -821,17 +818,14 @@ function main() {
     ImportExport.init();
 
     document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") {
-            if (
-                document.activeElement instanceof HTMLInputElement ||
-                document.activeElement instanceof HTMLTextAreaElement
-            ) {
-                document.activeElement.blur();
-            }
+        if (
+            e.key === "Escape" &&
+            (document.activeElement instanceof HTMLInputElement ||
+                document.activeElement instanceof HTMLTextAreaElement)
+        ) {
+            document.activeElement.blur();
         }
     });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    main();
-});
+document.addEventListener("DOMContentLoaded", main);
